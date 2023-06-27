@@ -1,39 +1,62 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, UUIDV4 } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class DevUser extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-User.init(
+DevUser.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      defaultValue: UUIDV4,
     },
-    name: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    yrs_experience: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    technology_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'technology',
+        key: 'id'
+      }
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
-        isEmail: true,
-      },
+        isEmail: true
+      }
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
-      },
+          len: [8]
+      }
+    },
+    picture_link: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
   },
   {
@@ -51,8 +74,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'devuser',
   }
 );
 
-module.exports = User;
+module.exports = DevUser;
