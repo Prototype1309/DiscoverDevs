@@ -7,7 +7,7 @@ USE developdevs_db;
 -- Creating tables
 
 CREATE TABLE developer (
-    id VARCHAR(36) PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     yrs_experience INT NOT NULL,
