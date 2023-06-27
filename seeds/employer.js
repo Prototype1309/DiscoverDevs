@@ -1,4 +1,4 @@
-const { EmployerUser } = require('../models/EmployerUser');
+const { EmployerUser } = require('../models');
 const { sequelize } = require('../models');
 
 const employerData = [
@@ -9,11 +9,10 @@ const employerData = [
         role: '',
         email: '',
         password: '',
-        },
+    },
 ];
 
 const seedEmployer = async () => {
-    await sequelize.sync({ force: true });
     await EmployerUser.bulkCreate(employerData);
 };
 

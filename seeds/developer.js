@@ -17,7 +17,7 @@ const developerData = [
 
 const seedDeveloper = async () => {
     await sequelize.sync({ force: true });
-    await Developer .bulkCreate(developerData);
+    await Developer.bulkCreate(developerData);
 }
 
 module.exports = seedDeveloper;
