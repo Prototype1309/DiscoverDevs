@@ -11,10 +11,10 @@ class DevUser extends Model {
 DevUser.init(
   {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      defaultValue: UUIDV4,
+      autoIncrement: true
     },
     first_name: {
       type: DataTypes.STRING,
@@ -27,14 +27,6 @@ DevUser.init(
     yrs_experience: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    technology_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'technology',
-        key: 'id'
-      }
     },
     location: {
       type: DataTypes.STRING,
@@ -74,7 +66,7 @@ DevUser.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'devuser',
+    modelName: 'developer',
   }
 );
 

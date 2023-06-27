@@ -62,7 +62,7 @@ EmployerUser.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'employeruser',
+    modelName: 'employer',
   }
 );
 
