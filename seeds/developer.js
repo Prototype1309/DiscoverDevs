@@ -1,5 +1,5 @@
 const { Developer } = require('../models/DevUser');
-const { sequelize } = require('../models');
+const { sequelize } = require('../config/connection');
 
 const developerData = [
     {
@@ -11,13 +11,12 @@ const developerData = [
         email:'',
         password: '',
         picture_link: ''
-
     }
 ];
 
 const seedDeveloper = async () => {
     await sequelize.sync({ force: true });
     await Developer.bulkCreate(developerData);
-}
+};
 
 module.exports = seedDeveloper;
