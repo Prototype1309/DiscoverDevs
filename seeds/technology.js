@@ -17,6 +17,9 @@ const technologyData = [
     // Ask group what else we want to add
 ];
 
-const seedTechnology = () => Technology.bulkCreate(technologyData);
+const seedTechnology = async () => {
+    await sequelize.sync({ force: true });
+    await Technology.bulkCreate(technologyData);
+};
 
 module.exports = seedTechnology;
