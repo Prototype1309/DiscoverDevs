@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { DevUser, EmployerUser, Technology } = require('../models');
+const { Developer, EmployerUser, Technology } = require('../models');
 
 const developerData = require('./developer');
 const employerData = require('./employer');
@@ -8,7 +8,7 @@ const technologyData = require('./technology');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await DevUser.bulkCreate(developerData, {
+  await Developer.bulkCreate(developerData, {
     individualHooks: true,
     returning: true,
   });
@@ -23,10 +23,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  process.exit(0);
-};
-
-seedDatabase();
 
   // for (const project of projectData) {
   //   await Project.create({
@@ -35,7 +31,7 @@ seedDatabase();
   //   });
   // }
 
-//   process.exit(0);
-// };
+  process.exit(0);
+};
 
-// seedDatabase();
+seedDatabase();
