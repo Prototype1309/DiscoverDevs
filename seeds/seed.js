@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
 const { Developer, EmployerUser, Technology } = require('../models');
 
-const developerData = require('./developer');
-const employerData = require('./employer');
-const technologyData = require('./technology');
+const developerData = require('./dev-seeds');
+const employerData = require('./emp-seeds');
+const technologyData = require('./tech-seeds');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
