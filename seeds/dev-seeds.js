@@ -1,6 +1,3 @@
-// const { DevUser } = require('../models/DevUser');
-// const { sequelize } = require('../config/connection');
-
 const developerData = [
   {
     first_name: 'Bob',
@@ -13,10 +10,5 @@ const developerData = [
     picture_link: 'http://fakeimglink.com/',
   },
 ];
-
-// const seedDeveloper = async () => {
-//   await sequelize.sync({ force: true });
-//   await DevUser.bulkCreate(developerData);
-// };
 
 module.exports = developerData;
