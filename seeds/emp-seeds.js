@@ -1,6 +1,3 @@
-const { EmployerUser } = require('../models');
-const { sequelize } = require('../models');
-
 const employerData = [
   {
     company: 'Tech Company',
@@ -14,9 +11,4 @@ const employerData = [
   },
 ];
 
-const seedEmployer = async () => {
-  await sequelize.sync({ force: true });
-  await EmployerUser.bulkCreate(employerData);
-};
-
-module.exports = seedEmployer;
+module.exports = employerData;

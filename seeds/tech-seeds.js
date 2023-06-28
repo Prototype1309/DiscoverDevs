@@ -1,6 +1,3 @@
-const { Technology } = require('../models/Technology');
-const { sequelize } = require('../models');
-
 const technologyData = [
   {
     name: 'JavaScript',
@@ -17,9 +14,4 @@ const technologyData = [
   // Ask group what else we want to add
 ];
 
-const seedTechnology = async () => {
-  await sequelize.sync({ force: true });
-  await Technology.bulkCreate(technologyData);
-};
-
-module.exports = seedTechnology;
+module.exports = technologyData;
