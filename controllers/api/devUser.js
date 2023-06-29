@@ -1,15 +1,24 @@
 const router = require('express').Router();
-const { DevUser, Technology } = require('../../models');
+const { DevUser, Technology } = require('../../models')
 
 router.get('/', async (req, res) => {
-  try {
-    const devUser = await DevUser.findAll({});
-    res.status(200).json(devUser);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-});
+    try {
+        const devUsers = await DevUser.findAll({
+            include: {
+                model: Technology
+            }
+        })
+
+        const simpleData = devUsers.map((event) => event.get({ plain: true }))
+
+        console.log(simpleData)
+        res.status(200).json(simpleData)
+
+    } catch (err) {
+        console.error(err)
+        res.status(500).json(err)
+    }
+})
 
 //Do we need to add a way to get user by tech_id here?
 router.get('/:id', async (req, res) => {

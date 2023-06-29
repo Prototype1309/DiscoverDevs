@@ -3,7 +3,7 @@ const developerData = [
     first_name: 'Bob',
     last_name: 'Ross',
     yrs_experience: 3,
-    technology_id: 3,
+    technology_id: 1,
     location: 'Raleigh',
     email: 'BobRoss@email.com',
     password: '12345',
