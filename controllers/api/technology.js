@@ -12,4 +12,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const singleTechnology = await Technology.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json({ message: 'Technology has been removed.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
