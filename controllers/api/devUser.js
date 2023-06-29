@@ -1,10 +1,27 @@
 const router = require('express').Router();
-const DevUser = require('../../models/DevUser');
+const { DevUser, Technology} = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
     const devUser = await DevUser.findAll({});
     res.status(200).json(devUser);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
+
+//Do we need to add a way to get user by tech_id here?
+router.get('/:id', async (req, res) => {
+  try {
+    const getDev = await DevUser.findByPk(req.params.id, {
+      include: { model: Technology },
+    });
+    if (!getDev) {
+      res.status(400).json({ message: 'Developer not found.' });
+      return;
+    }
+    res.json(getDev);
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
