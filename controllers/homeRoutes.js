@@ -1,18 +1,22 @@
 const router = require('express').Router();
+const Technology = require('../models/Technology')
 
 router.get('/', (req, res) => {
-<<<<<<< HEAD
-=======
-  res.render('login');
-});
-router.get('/login', (req, res) => {
->>>>>>> 37dc5b05fcd2e152340af1f18e410e7d8b5e7a20
   res.render('login');
 });
 
-router.get('/register', (req, res) => {
-  console.log('register page');
-  res.render('register');
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+router.get('/register', async (req, res) => {
+  
+  const listOfTechs = await Technology.findAll({})
+  const techs = listOfTechs.map((tech) =>
+    tech.get({plain: true})
+  )
+
+  res.render('register', {techs});
 });
 
 module.exports = router;
