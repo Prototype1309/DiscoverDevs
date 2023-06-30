@@ -19,7 +19,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-//Do we need to add a way to get user by tech_id here?
 router.get('/:id', async (req, res) => {
   try {
     const getDev = await DevUser.findByPk(req.params.id, {
@@ -54,8 +53,32 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id'),
-  async (req, res) => {
+
+router.put('/:id', async (req,res) => {
+    try {
+
+        const updateUser = await DevUser.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        })
+
+        if (!updateUser) {
+            res.status(404).json({message: "User not found"})
+            return
+        }
+
+        res.status(200).json(updateUser)
+
+    } catch (err) {
+        console.error(err)
+        res.status(500).json(err);
+    }
+})
+
+
+router.delete('/:id', async (req, res) => {
+    console.log("hello from delete")
     try {
       const delDev = await DevUser.destroy({
         where: {
@@ -66,11 +89,11 @@ router.delete('/:id'),
         res.status(400).json({ message: 'Developer not found.' });
         return;
       }
-      res.json({ message: 'Developer deleted.' });
+      res.status(200).json({ message: 'Developer deleted.' });
     } catch (error) {
       console.error(err);
       res.status(500).json(err);
     }
-  };
+  });
 
 module.exports = router;

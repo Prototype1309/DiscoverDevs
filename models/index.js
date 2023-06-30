@@ -8,22 +8,7 @@ const sequelize = require('../config/connection');
 class UserTech extends Model{}
 
 UserTech.init(
-    {
-    // developer_id: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: DevUser,
-    //         key: 'id'
-    //     }
-    // },
-    // technology_id: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //         model: Technology, 
-    //         key: 'id'
-    //     }
-    // },
-    },
+    { },
     {
         sequelize,
         timestamps: false,
