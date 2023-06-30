@@ -11,6 +11,21 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+      const getEmployer = await EmployerUser.findByPk(req.params.id);
+      if (!getEmployer) {
+        res.status(400).json({ message: 'Employer not found.' });
+        return;
+      }
+      res.json(getEmployer);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json(err);
+    }
+  });
+  
+
 router.post('/', async (req, res) => {
   try {
     const postEmployer = await EmployerUser.create(req.body);
@@ -20,10 +35,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Are we having employers have the ability to update their tech_id
-
-router.delete('/:id'),
-  async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
       const delEmpoyer = await EmployerUser.destroy({
         where: {
@@ -39,6 +51,6 @@ router.delete('/:id'),
       console.error(err);
       res.status(500).json(err);
     }
-  };
+  });
 
 module.exports = router;
