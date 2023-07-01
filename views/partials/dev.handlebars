@@ -1,5 +1,13 @@
-<h2>{{id}},</h2>
-<h2>{{first_name}},</h2>
 
-</br>
-</br>
+
+<div class="wrapper dev">
+      <div class="form-wrapper sign-in inner-dev">
+         <h2>
+            {{first_name}} {{last_name}}
+         </h2>
+        {{#each technologies as |tech|}}
+            {{> tech}}
+        {{/each}}
+      
+      </div>
+</div>
