@@ -1,3 +1,11 @@
-{{#each devs as |dev|}}
-    {{> dev}}
-{{/each}}
+<div class="columns-3">
+    <div class="all-devs">
+        {{#each filteredDevs as |dev|}}
+            {{> dev}}
+        {{/each}}
+    </div>
+</div>
+
+
+
+

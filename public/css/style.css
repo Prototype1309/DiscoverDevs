@@ -8,9 +8,9 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
   min-height: 100vh;
   background-image: url("../../images/backgroundpicture.jpg") ;
 }
@@ -161,9 +161,9 @@ button {
 }
 
 body {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   min-height: 100vh;
   background: #000;
 }
@@ -297,4 +297,9 @@ button {
 
 .signUp-link p a:hover {
   text-decoration: underline;
+}
+
+.tech-image {
+  height: 30px;
+  width: auto;
 }
