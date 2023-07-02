@@ -8,15 +8,23 @@
 }
 
 body {
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-  min-height: 100vh;
-  background-image: url("../../images/backgroundpicture.jpg") ;
-}
+/* display: flex;
+  justify-content: center;
+  align-items: center;   */
 
+  justify-content: center;
+  align-items: column;
+  /* background-image: url("../../images/backgroundpicture.jpg") ; */
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .wrapper {
-  position: relative;
+
   width: 400px;
   height: 500px;
   background: #000;
@@ -24,6 +32,22 @@ body {
   border-radius: 20px;
   padding: 40px;
   overflow: hidden;
+}
+
+.wrapper-home {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+
+  place-items: center;
+  text-align: center;
+  position:relative; 
+  color: blue;
+  border-radius: 20px;
+  width: 600px;
+  margin-top: 50px;
+  box-shadow: 0 0 20px #0ef;
 }
 
 .wrapper:hover {
@@ -50,6 +74,7 @@ body {
 }
 
 .wrapper .form-wrapper.sign-up {
+  
   position: absolute;
   top: 450px;
   left: 0;
