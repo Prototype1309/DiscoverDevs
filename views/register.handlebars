@@ -1,12 +1,19 @@
 
-<div class="wrapper active">
-  <div class="form-wrapper sign-up">
-      <form action="">
-          <h2>Sign Up</h2>
+<div class="wrapper">
+      <form class="wrapper-registration">
+          <h2><b>Sign up</b></h2>
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">First name</label>
+          </div> 
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Last name</label>
+          </div>
           <div class="input-group">
               <input type="text" required>
               <label for="">Username</label>
-          </div> 
+          </div>
           <div class="input-group">
               <input type="email" required>
               <label for="">Email</label>
@@ -15,14 +22,30 @@
               <input type="password" required>
               <label for="">Password</label>
           </div>
+        <div class="input-group">
+              <select class="select-bar" name="technology">
+                   <option disabled selected value="">Choose your language</option>
+                   <option value="first">JavaScript</option>
+                   <option value="second">Php</option>
+                   <option value="third">Python</option>
+                   <option value="fourth">JavaScript</option>
+                   <option value="fifth">Php</option>
+                   <option value="sixth">Python</option>
+                   <option value="seventh">JavaScript</option>
+                   <option value="eighth">Php</option>
+                   <option value="nineth">Python</option>
+                   <option value="tenth">JavaScript</option>
+                   <option value="eleventh">Php</option>
+                   <option value="twelveth">Python</option>
+              </select>
+          </div>
           <div class="remember">
               <label><input type="checkbox"> I agree to the terms & conditions</label>
           </div>
-          <button type="submit">Sign Up</button>
+          <button class="btn" type="submit"><p>Sign Up</p></button>
           <div class="signUp-link">
-              <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+              <p>Already have an account? <a href="login" class="signInBtn-link">Sign In</a></p>
           </div>
-      </form>
-  </div>
+      </form>  
 </div>
 <script src="/js/register.js"></script>
