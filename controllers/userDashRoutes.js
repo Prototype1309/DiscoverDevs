@@ -1,58 +1,53 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const DevUser = require('../models/DevUser');
 
-router.use(express.urlencoded({ extended: true }));
-
-router.get('/dev/:id', async (req, res) => {
-  const devId = req.params.id;
+router.get('/:id', async (req, res) => {
   try {
-    const dev = await DevUser.findByPk(devId, {
-      raw: true,
-      include: [
-        {
-          model: Technology,
-          attributes: ['id', 'name', 'badge_link'],
-        },
-      ],
-    });
+    const userId = req.params.id;
+    const user = await DevUser.findByPk(userId);
 
-    if (!dev) {
-      return res
-        .status(404)
-        .render('error', { error: 'User profile not found.' });
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
     }
 
-    res.render('devs', { devData: dev });
+    res.json(user);
   } catch (error) {
-    res.status(500).render('error', { error: 'Internal server error.' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-router.post('/dev/:id', async (req, res) => {
-  const devId = req.params.id;
-
+router.put('/:id', async (req, res) => {
   try {
-    const dev = await DevUser.findByPk(devId, { raw: true });
+    const userId = req.params.id;
+    const updatedData = req.body;
 
-    if (!dev) {
-      return res
-        .status(404)
-        .render('error', { error: 'User profile not found' });
+    const user = await DevUser.findByPk(userId);
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
     }
 
-    dev.first_name = req.body.first_name;
-    dev.last_name = req.body.last_name;
-    dev.email = req.body.email;
-    // Update other properties as needed
+    if (updatedData.yearsOfExperience) {
+      user.yearsOfExperience = updatedData.yearsOfExperience;
+    }
 
-    await DevUser.update(dev, {
-      where: { id: devId },
-    });
+    if (updatedData.technology) {
+      user.technology = updatedData.technology;
+    }
 
-    res.redirect(`/devs/dev/${devId}`);
+    if (updatedData.contactInfo) {
+      user.contactInfo = updatedData.contactInfo;
+    }
+
+    if (updatedData.location) {
+      user.location = updatedData.location;
+    }
+
+    await user.save();
+
+    res.json({ message: 'User information updated successfully!' });
   } catch (error) {
-    res.status(500).render('error', { error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
