@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const devdash = require('./dashRoutes');
+const DevUser = require('../models/DevUser');
 
 router.use(express.urlencoded({ extended: true }));
 
 router.get('/dev/:id', async (req, res) => {
   const devId = req.params.id;
   try {
-    const dev = await devdash.findByPk(devId, {
+    const dev = await DevUser.findByPk(devId, {
       raw: true,
       include: [
         {
@@ -33,7 +33,7 @@ router.post('/dev/:id', async (req, res) => {
   const devId = req.params.id;
 
   try {
-    const dev = await devdash.findByPk(devId, { raw: true });
+    const dev = await DevUser.findByPk(devId, { raw: true });
 
     if (!dev) {
       return res
