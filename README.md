@@ -21,6 +21,12 @@ With DiscoverDevs, finding the perfect match for both employers and developers h
 - [Contact](#contact)
 
 ## Installation
+1. [Sequelize](https://www.npmjs.com/package/sequelize)
+2. [MySQL2](https://www.npmjs.com/package/mysql2)
+3. [Dotenv](https://www.npmjs.com/package/dotenv)
+4. [bcrypt](https://www.npmjs.com/package/bcrypt)
+5. [express](https://www.npmjs.com/package/express)
+6. [Handlebars](https://www.npmjs.com/package/handlebars)
 
 
 
@@ -40,15 +46,15 @@ With DiscoverDevs, finding the perfect match for both employers and developers h
 
 ## Contact
 
-Chad: [GitHub] , [LinkedIn], [Email]
+Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn] -- [Email](cwbatte2@gmail.com)
 </br>
 </br>
-Laura: [GitHub] , [LinkedIn], [Email]
+Laura: [GitHub](https://github.com/LJJordan124) -- [LinkedIn] -- [Email](jordan3313.lj@gmail.com)
 </br>
 </br>
-Mohamed: [GitHub] , [LinkedIn], [Email]
+Mohamed: [GitHub](https://github.com/Prototype1309) -- [LinkedIn] -- [Email](simo.hourri@gmail.com)
 </br>
 </br>
-Stephanie: [GitHub](https://github.com/HarrisSte) , [LinkedIn](https://www.linkedin.com/in/stephanie-harris-5069aa224/), [Email](mailto:st3phanie.harris@gmail.com)
+Stephanie: [GitHub](https://github.com/HarrisSte) -- [LinkedIn](https://www.linkedin.com/in/stephanie-harris-5069aa224/) -- [Email](mailto:st3phanie.harris@gmail.com)
 
 
