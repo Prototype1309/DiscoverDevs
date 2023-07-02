@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Technology = require('../models/Technology')
 
 router.get('/', (req, res) => {
-  res.render('home');
+  res.render('login');
 });
 router.get('/home', (req, res) => {
   res.render('home');
