@@ -18,7 +18,7 @@ Technology.init(
     badge_link: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize,

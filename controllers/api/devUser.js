@@ -53,47 +53,43 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const updateUser = await DevUser.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
 
-router.put('/:id', async (req,res) => {
-    try {
-
-        const updateUser = await DevUser.update(req.body, {
-            where: {
-                id: req.params.id
-            }
-        })
-
-        if (!updateUser) {
-            res.status(404).json({message: "User not found"})
-            return
-        }
-
-        res.status(200).json(updateUser)
-
-    } catch (err) {
-        console.error(err)
-        res.status(500).json(err);
+    if (!updateUser) {
+      res.status(404).json({ message: 'User not found' });
+      return;
     }
-})
 
+    res.status(200).json(updateUser);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
 
 router.delete('/:id', async (req, res) => {
-    console.log("hello from delete")
-    try {
-      const delDev = await DevUser.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-      if (!delDev) {
-        res.status(400).json({ message: 'Developer not found.' });
-        return;
-      }
-      res.status(200).json({ message: 'Developer deleted.' });
-    } catch (error) {
-      console.error(err);
-      res.status(500).json(err);
+  console.log('hello from delete');
+  try {
+    const delDev = await DevUser.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!delDev) {
+      res.status(400).json({ message: 'Developer not found.' });
+      return;
     }
-  });
+    res.status(200).json({ message: 'Developer deleted.' });
+  } catch (error) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

@@ -8,5 +8,4 @@ router.get('/employer', (req, res) => {
   res.render('employerdash');
 });
 
-
 module.exports = router;
