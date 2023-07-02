@@ -299,7 +299,25 @@ button {
   text-decoration: underline;
 }
 
+.inner-dev {
+  flex-wrap: wrap
+}
+.inner-dev h2 {
+  margin: 0 30%;
+}
+
 .tech-image {
   height: 30px;
   width: auto;
+}
+
+.dev-image {
+  flex: 1 0;
+  height: 100px;
+  width: auto;
+  margin: 30%
+}
+
+body > div {
+  margin: 40px;
 }
