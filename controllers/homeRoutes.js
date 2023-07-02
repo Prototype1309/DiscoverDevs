@@ -21,5 +21,9 @@ router.get('/register', async (req, res) => {
 
   res.render('register', {techs});
 });
+router.get('/employer', (req, res) => {
+  res.render('employer');
+});
+
 
 module.exports = router;
