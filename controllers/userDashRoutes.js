@@ -56,4 +56,4 @@ router.post('/dev/:id', async (req, res) => {
   }
 });
 
-module.exports = router
+module.exports = router;
