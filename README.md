@@ -20,6 +20,7 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 - [Screenshot](#screenshot)
 - [Deployed Application](#deployedapplication)
 - [License](#license)
+- [Sources](#sources)
 - [Contact](#contact)
 
 ## Installation
@@ -51,12 +52,14 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Sources
+
 
 ## Contact
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn] -- [Email](cwbatte2@gmail.com)
 <br>
 <br>
-Laura: [GitHub](https://github.com/LJJordan124) -- [LinkedIn] -- [Email](jordan3313.lj@gmail.com)
+Laura: [GitHub](https://github.com/LJJordan124) -- [LinkedIn](https://www.linkedin.com/in/laura-jordan-510412241/) -- [Email](jordan3313.lj@gmail.com)
 <br>
 <br>
 Mohamed: [GitHub](https://github.com/Prototype1309) -- [LinkedIn] -- [Email](simo.hourri@gmail.com)
