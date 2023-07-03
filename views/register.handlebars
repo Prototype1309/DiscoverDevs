@@ -12,7 +12,11 @@
           </div>
           <div class="input-group">
               <input type="text" required>
-              <label for="">Username</label>
+              <label for="">Years of Experience</label>
+          </div>
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Location</label>
           </div>
           <div class="input-group">
               <input type="email" required>
@@ -22,8 +26,16 @@
               <input type="password" required>
               <label for="">Password</label>
           </div>
-        <div class="input-group">
-              <select class="select-bar" name="technology">
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Picture link</label>
+          </div>
+          <h3><b>Your Languages</b></h3>
+        <div id="tech-form">
+                {{#each techs as |registertech|}}
+                    {{> registertech}}
+                {{/each}}
+              {{!-- <select class="select-bar" name="technology">
                    <option disabled selected value="">Choose your language</option>
                    <option value="first">JavaScript</option>
                    <option value="second">Php</option>
@@ -37,7 +49,7 @@
                    <option value="tenth">JavaScript</option>
                    <option value="eleventh">Php</option>
                    <option value="twelveth">Python</option>
-              </select>
+              </select> --}}
           </div>
           <div class="remember">
               <label><input type="checkbox"> I agree to the terms & conditions</label>
