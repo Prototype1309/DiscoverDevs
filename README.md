@@ -1,8 +1,5 @@
 # DiscoverDevs
-
-
 ## Description
-
 Introducing "DiscoverDevs" - the ultimate platform for employers and developers to connect and collaborate! It's a user-friendly application that empowers employers to search for potential employees and developers to find exciting job opportunities.
 
 Employers can create profiles and specify their requirements, such as coding languages, location preferences, and desired experience. With advanced filtering options, they can efficiently discover developers who meet their criteria and directly engage with them.
@@ -13,7 +10,6 @@ DiscoverDevs allows users to easily update their profile information whenever ne
 
 With DiscoverDevs, finding the perfect match for employers and developers is simpler. It streamlines the hiring process, saves time for both parties, and fosters meaningful connections within the tech industry. Join DiscoverDevs today for talent acquisition and professional growth possibilities!
 ## Table of Contents
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologiesused)
@@ -25,7 +21,6 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 
 ## Installation
 **Packages required to run locally:**
-
 |Packages & Documentaion                                  | Installation      |
 |---------------------------------------------------------|-------------------|
 |[Sequelize](https://www.npmjs.com/package/sequelize)     |`npm i sequelize`  |
@@ -40,7 +35,7 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 
 
 ## Technologies Used
-NoSQL, Sequelize, Handlebars, 
+NoSQL, Sequelize, Handlebars, Tailwind, 
 
 
 ## Screenshot
@@ -51,11 +46,10 @@ To access our application you can click [this link]().
 
 
 ## License
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Sources
-Various sources were used in creating this application. 
+Various sources were used in creating this application. Some of those resources included 
 
 ## Contact
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn]() -- [Email](cwbatte2@gmail.com)
