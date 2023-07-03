@@ -14,6 +14,7 @@ body {
 
   justify-content: center;
   align-items: column;
+  background-color: black;
   /* background-image: url("../../images/backgroundpicture.jpg") ; */
 }
 main {
@@ -35,30 +36,36 @@ main {
 }
 
 .wrapper-home {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-
   place-items: center;
   text-align: center;
   position:relative; 
-  color: blue;
+  color: white;
   border-radius: 20px;
   width: 600px;
   margin-top: 50px;
   box-shadow: 0 0 20px #0ef;
 }
+.wrapper-home h1 {
+  font-size: 40px;
+}
+.wrapper-home p{
+  
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:20px;
+
+}
+
 
 .wrapper:hover {
   animation: animate 1s linear infinite;
 }
 
-@keyframes animate {
+/* @keyframes animate {
   100% {
     filter: hue-rotate(360deg);
   }
-}
+} */
 
 .form-wrapper {
   display: flex;
@@ -68,25 +75,43 @@ main {
   height: 100%;
   transition: 1s ease-in-out;
 }
-
-.wrapper.active .form-wrapper.sign-in {
+.wrapper-registration {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 450px;
+}
+.wrapper-registration::-webkit-scrollbar{
+  width: 6px;
+}
+.select-bar {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+}
+.select-bar option {
+  background-color: #000;
+}
+/* .wrapper.active .form-wrapper.sign-in {
   transform: translateY(-450px);
+} */
+
+.wrapper .form-wrapper.sign-up { 
+  top: 10px;
 }
 
-.wrapper .form-wrapper.sign-up {
-  
-  position: absolute;
-  top: 450px;
-  left: 0;
-}
-
-.wrapper.active .form-wrapper.sign-up {
+/* .wrapper.active .form-wrapper.sign-up {
   transform: translateY(-450px);
-}
+} */
+
 
 h2 {
-  font-size: 30px;
-  color: #fff;
+  
+  font-size: 50px;
+  color: white;
   text-align: center;
 }
 
@@ -137,19 +162,23 @@ h2 {
 }
 
 button {
+  
   position: relative;
   width: 100%;
   height: 40px;
   background: #0ef;
   box-shadow: 0 0 10px #0ef;
   font-size: 16px;
-  color: #000;
   font-weight: 500;
   cursor: pointer;
   border-radius: 30px;
   border: none;
   outline: none;
 }
+.btn p {
+  color:white;
+}
+
 
 .signUp-link {
   font-size: 14px;
@@ -176,24 +205,24 @@ button {
   font-weight: bold;
   margin-left: -5px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
+} */
 
-body {
+/* body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  min-height: 100vh;
+  /* min-height: 100vh;
   background: #000;
-}
+} */ */
 
-.wrapper {
+/* .wrapper {
   position: relative;
   width: 400px;
   height: 500px;
@@ -202,9 +231,9 @@ body {
   border-radius: 20px;
   padding: 40px;
   overflow: hidden;
-}
+} */
 
-.wrapper:hover {
+/* .wrapper:hover {
   animation: animate 1s linear infinite;
 }
 
@@ -238,12 +267,12 @@ body {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 60px;
   color: #fff;
   text-align: center;
-}
+} */
 
-.input-group {
+/* .input-group {
   position: relative;
   margin: 30px 0;
   border-bottom: 2px solid #fff;
@@ -322,7 +351,7 @@ button {
 
 .signUp-link p a:hover {
   text-decoration: underline;
-}
+} */
 
 .inner-dev {
   flex-wrap: wrap
