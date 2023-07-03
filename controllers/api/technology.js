@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const getTech = await Technology.findByPk(req.params.id, {
-    include: ({ model: DevUser }),
+      include: { model: DevUser },
     });
     if (!getTech) {
       res.status(400).json({ message: 'Technology not found.' });

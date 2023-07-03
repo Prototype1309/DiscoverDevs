@@ -12,19 +12,18 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    try {
-      const getEmployer = await EmployerUser.findByPk(req.params.id);
-      if (!getEmployer) {
-        res.status(400).json({ message: 'Employer not found.' });
-        return;
-      }
-      res.json(getEmployer);
-    } catch (err) {
-      console.error(err);
-      res.status(500).json(err);
+  try {
+    const getEmployer = await EmployerUser.findByPk(req.params.id);
+    if (!getEmployer) {
+      res.status(400).json({ message: 'Employer not found.' });
+      return;
     }
-  });
-  
+    res.json(getEmployer);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
 
 router.post('/', async (req, res) => {
   try {
@@ -36,21 +35,21 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    try {
-      const delEmpoyer = await EmployerUser.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-      if (!delEmpoyer) {
-        res.status(400).json({ message: 'Employer not found.' });
-        return;
-      }
-      res.json({ message: 'Employer deleted.' });
-    } catch (error) {
-      console.error(err);
-      res.status(500).json(err);
+  try {
+    const delEmpoyer = await EmployerUser.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!delEmpoyer) {
+      res.status(400).json({ message: 'Employer not found.' });
+      return;
     }
-  });
+    res.json({ message: 'Employer deleted.' });
+  } catch (error) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

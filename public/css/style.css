@@ -107,7 +107,7 @@ main {
   top: 10px;
 }
 
-h2 {
+h2, h3 {
   
   font-size: 50px;
   color: white;
@@ -376,3 +376,19 @@ button {
 body > div {
   margin: 40px;
 }
+
+
+#tech-form {
+  color: white;
+  margin: -5px 0 15px 5px;
+}
+
+.wrapper-registration > h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+#logout-button {
+  cursor: pointer;
+}
+
