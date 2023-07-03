@@ -42,6 +42,9 @@ registrationForm.addEventListener('submit', async (e) => {
 
     if (createNewDev.ok) {
         console.log(createNewDev)
+        document.location.replace('/devs')
+    } else {
+        console.log(response)
     }
 
 

@@ -9,8 +9,9 @@ loginButton.addEventListener('click', async (e) => {
     if (email && password) {
         const response = await fetch('/api/devuser/login', {
             method: 'POST',
-            body: JSON.stringify({email, password}),
-            headers: {'Content-Type': 'application/json'}
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email, password})
+        
         })
 
         if (response.ok) {

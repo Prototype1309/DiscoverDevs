@@ -54,7 +54,10 @@ router.get('/', auth, async (req, res) => {
       });
     }
 
-    res.render('devs', { filteredDevs });
+    res.render('devs', {
+      filteredDevs,
+      signedIn: req.session.loggedIn
+    });
   } else {
     const listOfDevs = await DevUser.findAll({
       include: [
@@ -67,12 +70,17 @@ router.get('/', auth, async (req, res) => {
     const filteredDevs = listOfDevs.map((dev) => dev.get({ plain: true }));
     console.log(filteredDevs[0].technologies);
 
-    res.render('devs', { filteredDevs });
+    res.render('devs', {
+      filteredDevs,
+      signedIn: req.session.loggedIn
+    });
   }
 });
 
 router.get('/dev/:id', auth, (req, res) => {
-  res.render('devs');
+  res.render('devs', {
+    signedIn: req.session.loggedIn
+  });
 });
 
 module.exports = router;
