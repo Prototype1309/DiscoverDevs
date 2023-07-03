@@ -25,8 +25,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  console.log(throughData)
-
   await UserTech.bulkCreate(throughData, {
     individualHooks: true,
     returning: true

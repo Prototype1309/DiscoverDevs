@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const DevUser = require('../models/DevUser');
 const Technology = require('../models/Technology');
+const auth = require('../utils/auth')
 const { Op } = require('sequelize');
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
   if (Object.keys(req.query).length > 0) {
     let techQueries;
 
@@ -70,7 +71,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dev/:id', (req, res) => {
+router.get('/dev/:id', auth, (req, res) => {
   res.render('devs');
 });
 
