@@ -3,15 +3,15 @@
 
 ## Description
 
-Introducing "DiscoverDevs" - the ultimate platform for employers and developers to connect and collaborate! DiscoverDevs is a user-friendly application that empowers employers to search for potential employees and developers to showcase their skills and find exciting job opportunities.
+Introducing "DiscoverDevs" - the ultimate platform for employers and developers to connect and collaborate! It's a user-friendly application that empowers employers to search for potential employees and developers to find exciting job opportunities.
 
-Employers using DiscoverDevs can easily create profiles to attract top talent. They have the ability to specify their requirements, such as coding languages, location preferences, and desired years of experience. With advanced filtering options, employers can efficiently discover developers who meet their specific criteria and directly engage with them.
+Employers can create profiles and specify their requirements, such as coding languages, location preferences, and desired experience. With advanced filtering options, they can efficiently discover developers who meet their criteria and directly engage with them.
 
-Developers, on the other hand, can create comprehensive profiles on DiscoverDevs to showcase their expertise. They can highlight their years of experience, list the technologies they excel in, and provide links to their portfolios, projects, or GitHub repositories. By regularly updating their profiles, developers ensure that they present their most current information, increasing their chances of attracting potential employers.
+On the other hand, developers can create comprehensive profiles to showcase their expertise, including years of experience, technologies they excel in, and links to their portfolios or projects. By regularly updating their profiles, developers increase their chances of attracting potential employers.
 
-DiscoverDevs provides a seamless experience for users to update their profile information whenever needed. Whether developers want to add new projects, acquire new skills, or change their location, they can easily reflect these updates on their profiles. This ensures that employers always have access to the most accurate and relevant details about each developer's background and capabilities.
+DiscoverDevs allows users to easily update their profile information whenever needed, ensuring employers have access to the most accurate details about each developer's background and capabilities.
 
-With DiscoverDevs, finding the perfect match for both employers and developers has never been simpler. The platform streamlines the hiring process, saving time for both parties, and fosters meaningful connections within the tech industry. Join DiscoverDevs today and unlock a world of talent acquisition and professional growth possibilities!
+With DiscoverDevs, finding the perfect match for employers and developers is simpler. It streamlines the hiring process, saves time for both parties, and fosters meaningful connections within the tech industry. Join DiscoverDevs today for talent acquisition and professional growth possibilities!
 ## Table of Contents
 
 - [Installation](#installation)
@@ -35,9 +35,8 @@ With DiscoverDevs, finding the perfect match for both employers and developers h
 |[Handlebars](https://www.npmjs.com/package/handlebars)   |`npm i handlebars` |
 
 
-
-
 ## Usage
+
 
 ## Technologies Used
 
@@ -54,7 +53,6 @@ With DiscoverDevs, finding the perfect match for both employers and developers h
 
 
 ## Contact
-
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn] -- [Email](cwbatte2@gmail.com)
 <br>
 <br>
