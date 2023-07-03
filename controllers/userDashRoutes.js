@@ -3,6 +3,9 @@ const DevUser = require('../models/DevUser');
 const auth = require('../utils/auth')
 
 
+// Need to res.render both of the below routes; make sure to include "signedIn: req.session.loggedIn"
+
+
 router.get('/:id', auth, async (req, res) => {
   try {
     const userId = req.params.id;

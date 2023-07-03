@@ -386,3 +386,7 @@ body > div {
   margin-bottom: 10px;
   font-size: 1.25rem;
 }
+
+#logout-button {
+  cursor: pointer;
+}

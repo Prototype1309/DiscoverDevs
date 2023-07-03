@@ -23,6 +23,23 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Logout
+router.get('/logout', async (req, res) => {
+  try {
+      if (req.session.loggedIn) {
+          req.session.destroy(() => {
+              res.json({message: 'Successfully logged out'})
+              res.status(204).end()
+          })
+      } else {
+          res.json({message: 'You\'re not logged in'})
+          res.status(404).end()
+      }
+  } catch (err) {
+      console.log(err)
+      res.status(500).json(err)
+  }
+})
 
 // Login authentication
 router.post('/login', async (req, res) => {
@@ -37,6 +54,7 @@ router.post('/login', async (req, res) => {
 
     if (!devUserData) {
       res.status(404).json({message: 'Incorrect email or password. Please try again'})
+      return
     }
 
     const passwordIsValid = await devUserData.checkPassword(req.body.password)
@@ -84,6 +102,8 @@ router.post('/', async (req, res) => {
 
     const postDev = await DevUser.create(req.body);
 
+    console.log(postDev)
+  
     const insertTech = tech.map((singleTech) => {
       return { developerId: postDev.id, technologyId: singleTech };
     });
