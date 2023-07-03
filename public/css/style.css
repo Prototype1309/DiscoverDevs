@@ -377,6 +377,7 @@ body > div {
   margin: 40px;
 }
 
+
 #tech-form {
   color: white;
   margin: -5px 0 15px 5px;
@@ -390,3 +391,4 @@ body > div {
 #logout-button {
   cursor: pointer;
 }
+
