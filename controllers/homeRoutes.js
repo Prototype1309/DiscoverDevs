@@ -16,8 +16,11 @@ router.get('/register', async (req, res) => {
   const listOfTechs = await Technology.findAll({});
   const techs = listOfTechs.map((tech) => tech.get({ plain: true }));
 
+  console.log(techs)
+
   res.render('register', { techs });
 });
+
 router.get('/employer', (req, res) => {
   res.render('employer');
 });
