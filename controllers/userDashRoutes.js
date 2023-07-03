@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const DevUser = require('../models/DevUser');
+const auth = require('../utils/auth')
 
-router.get('/:id', async (req, res) => {
+
+router.get('/:id', auth, async (req, res) => {
   try {
     const userId = req.params.id;
     const user = await DevUser.findByPk(userId);
@@ -16,7 +18,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', auth, async (req, res) => {
   try {
     const userId = req.params.id;
     const updatedData = req.body;
