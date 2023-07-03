@@ -40,12 +40,14 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 
 
 ## Technologies Used
+NoSQL, Sequelize, Handlebars, 
 
 
 ## Screenshot
 
 
 ## Deployed Application
+To access our application you can click [this link](). 
 
 
 ## License
@@ -53,16 +55,16 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Sources
-
+Various sources were used in creating this application. 
 
 ## Contact
-Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn] -- [Email](cwbatte2@gmail.com)
+Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn]() -- [Email](cwbatte2@gmail.com)
 <br>
 <br>
 Laura: [GitHub](https://github.com/LJJordan124) -- [LinkedIn](https://www.linkedin.com/in/laura-jordan-510412241/) -- [Email](jordan3313.lj@gmail.com)
 <br>
 <br>
-Mohamed: [GitHub](https://github.com/Prototype1309) -- [LinkedIn] -- [Email](simo.hourri@gmail.com)
+Mohamed: [GitHub](https://github.com/Prototype1309) -- [LinkedIn]() -- [Email](simo.hourri@gmail.com)
 <br>
 <br>
 Stephanie: [GitHub](https://github.com/HarrisSte) -- [LinkedIn](https://www.linkedin.com/in/stephanie-harris-5069aa224/) -- [Email](mailto:st3phanie.harris@gmail.com)
