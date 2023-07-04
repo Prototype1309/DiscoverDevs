@@ -14,7 +14,7 @@ body {
   background-image: url('https://getwallpapers.com/wallpaper/full/3/9/0/1322536-beautiful-techy-background-1920x1080-for-phones.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: cover;
 }
 
 main {
@@ -48,15 +48,16 @@ main {
 
 .wrapper-home h1 {
   font-size: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   padding: 10px;
+  font-weight: bold;
 }
 
 .wrapper-home p {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   padding: 10px;
 }
 
