@@ -211,7 +211,9 @@ form h2 {
 }
 
 .inner-dev {
-  flex-wrap: wrap
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .inner-dev h2 {
@@ -228,11 +230,14 @@ form h2 {
   margin: -5px 0 15px 5px;
 }
 
+.dev {
+  margin: 0 40px;
+}
+
 .dev-image {
-  flex: 1 0;
-  height: 100px;
+  height: 42%;
   width: auto;
-  margin: 30%
+  border-radius: 10px;
 }
 
 body>div {
