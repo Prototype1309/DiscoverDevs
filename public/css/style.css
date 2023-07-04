@@ -234,6 +234,10 @@ form h2 {
   height: 30px;
   width: auto;
 }
+#tech-form {
+  color: white;
+  margin: -5px 0 15px 5px;
+} 
 .dev-image {
   flex: 1 0;
   height: 100px;
@@ -265,13 +269,10 @@ body>div {
 #results {
 margin-top: 60px; /* Adjust margin-top to accommodate the filter bar */
 }
-
 .filter-btn {
   color: white;
   width: 150px;
 }
-=======
-
 
 #tech-form {
   color: white;
