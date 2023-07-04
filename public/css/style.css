@@ -8,13 +8,13 @@
 }
 
 body {
-  /* display: flex;
   justify-content: center;
-  align-items: center;   */
-  justify-content: center;
-  align-items: column;
+  align-items: center;
   background-color: black;
-  background-image: url('https: //getwallpapers.com/wallpaper/full/3/9/0/1322536-beautiful-techy-background-1920x1080-for-phones.jpg');
+  background-image: url('https://getwallpapers.com/wallpaper/full/3/9/0/1322536-beautiful-techy-background-1920x1080-for-phones.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -24,16 +24,6 @@ main {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
-/* container::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  opacity: 0.5;
-} */
 
 .wrapper {
   width: 400px;
@@ -58,21 +48,21 @@ main {
 
 .wrapper-home h1 {
   font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 .wrapper-home p {
-
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
-
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
-
 
 .wrapper:hover {
   animation: animate 1s linear infinite;
 }
-
 
 .form-wrapper {
   overflow-y: scroll;
@@ -113,15 +103,12 @@ main {
   background-color: #000;
 }
 
-
-
 .wrapper .form-wrapper.sign-up {
   top: 10px;
 }
 
 h2,
 h3 {
-
   font-size: 50px;
   color: white;
   text-align: center;
@@ -174,7 +161,6 @@ h3 {
 }
 
 button {
-
   position: relative;
   width: 100%;
   height: 40px;
@@ -222,7 +208,6 @@ form h2 {
   margin-left: -5px;
 }
 
-
 .inner-dev {
   flex-wrap: wrap
 }
@@ -230,14 +215,17 @@ form h2 {
 .inner-dev h2 {
   margin: 0 30%;
 }
+
 .tech-image {
   height: 30px;
   width: auto;
 }
+
 #tech-form {
   color: white;
   margin: -5px 0 15px 5px;
-} 
+}
+
 .dev-image {
   flex: 1 0;
   height: 100px;
@@ -251,7 +239,7 @@ body>div {
 
 #filter-bar {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background-color: transparent;
@@ -267,8 +255,9 @@ body>div {
 }
 
 #results {
-margin-top: 60px; /* Adjust margin-top to accommodate the filter bar */
+  margin-top: 60px;
 }
+
 .filter-btn {
   color: white;
   width: 150px;
@@ -287,4 +276,3 @@ margin-top: 60px; /* Adjust margin-top to accommodate the filter bar */
 #logout-button {
   cursor: pointer;
 }
-
