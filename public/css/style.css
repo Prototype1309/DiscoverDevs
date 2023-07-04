@@ -234,6 +234,10 @@ form h2 {
   height: 30px;
   width: auto;
 }
+#tech-form {
+  color: white;
+  margin: -5px 0 15px 5px;
+} 
 .dev-image {
   flex: 1 0;
   height: 100px;
