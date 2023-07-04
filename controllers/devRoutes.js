@@ -58,9 +58,13 @@ router.get('/', auth, async (req, res) => {
       });
     }
 
+    const listOfTechs = await Technology.findAll({});
+    const renderTechs = listOfTechs.map((t) => t.get({ plain: true }));
+
     res.render('devs', {
       filteredDevs,
-      signedIn: req.session.loggedIn
+      signedIn: req.session.loggedIn,
+      renderTechs
     });
   } else {
     const listOfDevs = await DevUser.findAll({
@@ -74,9 +78,13 @@ router.get('/', auth, async (req, res) => {
     const filteredDevs = listOfDevs.map((dev) => dev.get({ plain: true }));
     console.log(filteredDevs[0].technologies);
 
+    const listOfTechs = await Technology.findAll({});
+    const renderTechs = listOfTechs.map((t) => t.get({ plain: true }));
+
     res.render('devs', {
       filteredDevs,
-      signedIn: req.session.loggedIn
+      signedIn: req.session.loggedIn,
+      renderTechs
     });
   }
 });

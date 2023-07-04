@@ -1,29 +1,49 @@
 
 <div class="filter-bar">
     <div id="filter-bar">
-        <input type="text" id="location" placeholder="Location">
-        <select id="experience">
-            <option value="">Years of Experience</option>
-            <option value="1-3">1-3 years</option>
-            <option value="4-6">4-6 years</option>
-            <option value="7+">7+ years</option>
-        </select>
-        <input type="text" id="technologies" placeholder="Technologies">
+        <div class="filter-form">
+            <input type="text" id="location" placeholder="Location">
+            <select id="experience">
+                <option value="">Years of Experience</option>
+                <option value="1-3">1-3 years</option>
+                <option value="4-6">4-6 years</option>
+                <option value="7+">7+ years</option>
+            </select>
+            <div class="list-of-techs">
+                {{#each renderTechs as |filtertechs|}}
+                    {{> filtertechs}}
+                {{/each}}
+            </div>
+        </div>
         <button class="filter-btn" onclick="filterResults()">Filter</button>
     </div>
 
-<div class="columns-3">
-    <div class="all-devs">
-        {{#each filteredDevs as |dev|}}
-            {{>dev}}
-        {{/each}}
+    <div class="columns-3">
+        <div class="all-devs">
+            {{#each filteredDevs as |dev|}}
+                {{>dev}}
+            {{/each}}
+        </div>
     </div>
 </div>
-</div>
+
+<script src="/js/filter.js"></script>
 
 
 
 
+
+
+<form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+
+    <div>
+        <input type="checkbox" name="agree" id="agree" value="yes agree"/>
+        <label for="agree">Agree</label>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Submit"/>
+    </div>
+</form>
 
 
 
