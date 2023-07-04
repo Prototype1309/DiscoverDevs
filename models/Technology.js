@@ -15,8 +15,8 @@ Technology.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    badge_link: {
-      type: DataTypes.STRING,
+    badge_element: {
+      type: DataTypes.STRING(5000),
       allowNull: false,
     },
   },
