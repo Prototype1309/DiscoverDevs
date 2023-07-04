@@ -15,6 +15,13 @@ const sessionConfig = {
     resave: false,
     saveUninitialized: false,
     cookie: {
+
+        maxAge: 60 * 60 * 1000,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict',
+       
+    }
         maxAge: 60*60*1000
     },
     store: new SequelizeStore({
