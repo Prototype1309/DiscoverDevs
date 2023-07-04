@@ -26,6 +26,9 @@ main {
 }
 
 .wrapper {
+  place-items: center;
+  text-align: center;
+  position: relative;
   width: 20rem;
   height: 35rem;
   background: #000;
@@ -33,7 +36,9 @@ main {
   border-radius: 20px;
   padding: 40px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 18rem;
+  padding-top: 5rem;
+  margin-top: 50px;
 }
 
 .wrapper-home {
@@ -231,7 +236,7 @@ form h2 {
 }
 
 .dev {
-  margin: 0 40px;
+  margin: 0 40px 30px;
 }
 
 .dev-image {
@@ -302,6 +307,7 @@ footer nav ul {
   display: flex;
   justify-content: space-around;
   font-size: 20px;
+  padding-bottom: 2rem;
 }
 
 footer nav ul li {
