@@ -28,7 +28,7 @@ router.get('/', auth, async (req, res) => {
       include: [
         {
           model: Technology,
-          attributes: ['id', 'name', 'badge_link'],
+          attributes: ['id', 'name', 'badge_element'],
         },
       ],
     });
@@ -63,7 +63,7 @@ router.get('/', auth, async (req, res) => {
       include: [
         {
           model: Technology,
-          attributes: ['id', 'name', 'badge_link'],
+          attributes: ['id', 'name', 'badge_element'],
         },
       ],
     });
