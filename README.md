@@ -35,21 +35,27 @@ With DiscoverDevs, finding the perfect match for employers and developers is sim
 
 
 ## Technologies Used
-NoSQL, Sequelize, Handlebars, Tailwind, 
-
+1. NoSQL
+2. Sequelize
+3. Handlebars
+4. Tailwind
+5. Node
+6. Express
+7. Dotenv
+8. bcrypt
 
 ## Screenshot
 
 
 ## Deployed Application
-To access our application you can click [this link](). 
+To access our application you can click [this link](https://discoverdevs-2aa18af2a0dc.herokuapp.com/home). 
 
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Sources
-Various sources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. We also referenced documentation for our teachnologies in order to properly their functionalities. A bulk of help did come from the resources provided by the bootcamp itself; past lessons, homework, and resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
+Various sources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. We also referenced documentation for our teachnologies in order to properly their functionalities. A bulk of help did come from the resources provided by the bootcamp itself; past lessons, homework, mini-projects, and resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
 
 ## Contact
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn](https://www.linkedin.com/in/chad-batten-b712328a/) -- [Email](cwbatte2@gmail.com)
