@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { DevUser, Technology, UserTech } = require('../../models');
 const bcrypt = require('bcrypt')
-
+const validator = require('validator')
 
 
 // Get all devs
@@ -43,6 +43,12 @@ router.get('/logout', async (req, res) => {
 
 // Login authentication
 router.post('/login', async (req, res) => {
+
+  if (!validator.isEmail(req.body.email)) {
+    console.log("not a valid email")
+    res.status(500)
+    return
+  }
 
   try {
 
