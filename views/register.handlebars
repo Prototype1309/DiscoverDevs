@@ -25,30 +25,19 @@
               <input type="password" required>
               <label for="">Password</label>
           </div>
-          <div class="input-group">
+           <div class="input-group">
+              <input type="password" required>
+              <label for="">Confirm Password</label>
+          </div>
+          {{!-- <div class="input-group">
               <input type="text" required>
               <label for="">Picture link</label>
-          </div> 
+          </div>  --}}
           <h3><b>Your Languages</b></h3>
         <div id="tech-form"> 
                 {{#each techs as |registertech|}}
                     {{>registertech}}
                 {{/each}}
-              {{!-- <select class="select-bar" name="technology">
-                   <option disabled selected value="">Choose your language</option>
-                   <option value="first">JavaScript</option>
-                   <option value="second">Php</option>
-                   <option value="third">Python</option>
-                   <option value="fourth">JavaScript</option>
-                   <option value="fifth">Php</option>
-                   <option value="sixth">Python</option>
-                   <option value="seventh">JavaScript</option>
-                   <option value="eighth">Php</option>
-                   <option value="nineth">Python</option>
-                   <option value="tenth">JavaScript</option>
-                   <option value="eleventh">Php</option>
-                   <option value="twelveth">Python</option>
-              </select> --}}
           </div>
           <div class="remember">
               <label><input type="checkbox"> I agree to the terms & conditions</label>
