@@ -1,37 +1,36 @@
 function filterResults() {
   var location = document.getElementById('location').value.toLowerCase();
   var experience = document.getElementById('experience').value;
-  var technologies = document
-    .getElementById('technologies')
-    .value.toLowerCase();
+  var technologies = document.querySelector('.list-of-techs')
+  
+  let techs = technologies.querySelectorAll('input[id*="tech"]')
+  let checkedTechs = []
+  for (let i=0; i< techs.length; i++) {
 
-  var devs = document.getElementsByClassName('dev');
+      if (techs[i].checked) {
+          checkedTechs.push(techs[i].id.match(/\d+/)[0])
+      }
+      
+  }
 
-  for (var i = 0; i < devs.length; i++) {
-    var dev = devs[i];
+  let queryString = "?"
 
-    var devLocation = dev.getAttribute('data-location').toLowerCase();
-    var devExperience = dev.getAttribute('data-experience');
-    var devTechnologies = dev.getAttribute('data-technologies').toLowerCase();
+  checkedTechs.forEach(checkedTech => {
+    queryString += `tech=${checkedTech}&`
+  })
 
-    var showDev = true;
+  if (location) {
+    queryString += `location=${location}&`
+  }
 
-    if (location !== '' && devLocation.indexOf(location) === -1) {
-      showDev = false;
-    }
+  if (experience) {
+    queryString += `yrs_experience=${experience}&`
+  }
 
-    if (experience !== '' && devExperience !== experience) {
-      showDev = false;
-    }
+  queryString = queryString.slice(0, -1)
 
-    if (technologies !== '' && devTechnologies.indexOf(technologies) === -1) {
-      showDev = false;
-    }
-
-    if (showDev) {
-      dev.style.display = 'block';
-    } else {
-      dev.style.display = 'none';
-    }
+  if (queryString) {
+    console.log(document.location)
+    document.location.replace(document.location.href.match(/.+devs/)[0] + queryString)
   }
 }
