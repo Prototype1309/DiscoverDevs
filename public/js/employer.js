@@ -6,11 +6,10 @@ registrationForm.addEventListener('submit', async (e) => {
   const [
     reqFirstName,
     reqLastName,
-    reqYrsExperience,
-    reqLocation,
+    reqCompanyName,
     reqEmail,
     reqPassword,
-    reqPictureLink,
+    reqRole,
   ] = [
     e.target[0].value,
     e.target[1].value,
@@ -21,31 +20,21 @@ registrationForm.addEventListener('submit', async (e) => {
     e.target[6].value,
   ];
 
-  let techs = registrationForm.querySelectorAll('input[id*="tech"]');
-  let checkedTechs = [];
-  for (let i = 0; i < techs.length; i++) {
-    if (techs[i].checked) {
-      checkedTechs.push(techs[i].id.match(/\d+/)[0]);
-    }
-  }
-
-  const createNewDev = await fetch('/api/devuser', {
+  const createNewEmployer = await fetch('/api/employerUser', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       first_name: reqFirstName,
       last_name: reqLastName,
-      yrs_experience: reqYrsExperience,
+      company_name: reqCompanyName,
       email: reqEmail,
       password: reqPassword,
-      location: reqLocation,
-      picture_link: reqPictureLink,
-      technologies: checkedTechs,
+      role: reqRole,
     }),
   });
 
-  if (createNewDev.ok) {
-    console.log(createNewDev);
+  if (createNewEmployer.ok) {
+    console.log(createNewEmployer);
     document.location.replace('/devs');
   } else {
     console.log(response);

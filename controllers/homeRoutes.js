@@ -28,17 +28,6 @@ router.get('/register', async (req, res) => {
   });
 });
 
-router.get('/register', async (req, res) => {
-  const listOfTechs = await Technology.findAll({});
-  const techs = listOfTechs.map((tech) => tech.get({ plain: true }));
-
-  res.render('register', {
-    techs,
-    signedIn: req.session.loggedIn,
-  });
-});
-
-
 router.get('/employer', (req, res) => {
   res.render('employer', {
     signedIn: req.session.loggedIn
