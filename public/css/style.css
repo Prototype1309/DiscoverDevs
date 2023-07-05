@@ -114,12 +114,17 @@ main {
   top: 10px;
 }
 
+.all-devs > .wrapper {
+  padding: 20px 15px 15px 25px;
+}
+
 h2,
 h3 {
   font-size: 50px;
   color: white;
   text-align: center;
 }
+
 
 .input-group {
   position: relative;
@@ -222,7 +227,9 @@ form h2 {
 }
 
 .inner-dev h2 {
-  margin: 0 30%;
+  margin: 0 10%;
+  font-size: 1.5rem;
+  
 }
 
 .tech-image {
@@ -237,6 +244,7 @@ form h2 {
 
 .dev {
   margin: 0 40px 30px;
+  color: white;
 }
 
 .dev-image {
@@ -274,6 +282,40 @@ body>div {
   flex-wrap: wrap;
   width: 80%;
 
+}
+
+.all-dev-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.other-info {
+  width: 50%;
+  display: inline-block;
+}
+
+.other-info > * {
+  margin-bottom: 15px;
+}
+
+.each-tech-list {
+  width: 50%;
+  text-align:left;
+  display: inline-block;
+
+}
+
+.each-tech-list > * {
+  width: 100%;
+  margin: 6px 0;
+}
+
+
+.each-tech-list svg, .each-tech-list p {
+  display: inline-block;
+  margin: 0;
 }
 
 #results {
