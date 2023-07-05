@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Profile Card</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
-
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> 
-</head>
-
 <body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-position: center; background-image:url('https://getwallpapers.com/wallpaper/full/3/9/0/1322536-beautiful-techy-background-1920x1080-for-phones.jpg');">
   <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
 	<!--Main Col-->
 	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-85 mx-6 lg:mx-0">
 		<div class="p-4 md:p-12 text-center lg:text-left">
 			<!-- Image for mobile view-->
-			<div class="relative block lg:hidden">
-				<img src="https://i0.wp.com/www.boznoslawoffice.com/wp-content/uploads/2015/09/no_avatar.jpg?fit=512%2C512&ssl=1" class="rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center">
-			</div>
+			<div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://i0.wp.com/www.boznoslawoffice.com/wp-content/uploads/2015/09/no_avatar.jpg?fit=512%2C512&ssl=1')"></div>
 			
 			<svg for="input-file" fill="#ffffff" width="40px" height="0px" viewBox="-9.6 -9.6 51.20 51.20" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-9.6" y="-9.6" width="51.20" height="51.20" rx="25.6" fill="#1D4ED8" strokewidth="0"/></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"><path d="M0 28q0 0.832 0.576 1.44t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.44v-20q0-0.832-0.576-1.408t-1.408-0.576h-6.016v-2.016q0-0.832-0.576-1.408t-1.408-0.576h-12q-0.832 0-1.44 0.576t-0.576 1.408v2.016h-5.984q-0.832 0-1.44 0.576t-0.576 1.408v20zM4 26.016v-16h8v-4h8v4h8v16h-24zM6.016 13.024q0 0.384 0.288 0.704t0.704 0.288 0.704-0.288 0.288-0.704-0.288-0.704-0.704-0.32-0.704 0.32-0.288 0.704zM10.016 18.016q0 2.496 1.728 4.224t4.256 1.76 4.256-1.76 1.76-4.224-1.76-4.256-4.256-1.76-4.256 1.76-1.728 4.256zM12 18.016q0-1.664 1.184-2.848t2.816-1.152 2.816 1.152 1.184 2.848-1.184 2.816-2.816 1.184-2.816-1.184-1.184-2.816z"/> </g></svg>
 			<label for="input-file"></label>
@@ -73,8 +56,8 @@
 	</div>
 	
 	<!--Img for computer view-->
-	<div class="relative w-full lg:w-2/5 hidden lg:block">
-		<img src="https://i0.wp.com/www.boznoslawoffice.com/wp-content/uploads/2015/09/no_avatar.jpg?fit=512%2C512&ssl=1" class="rounded-none lg:rounded-lg shadow-2xl" style="width:400px; height:500px;">
+	<div class="w-full lg:w-2/5">
+		<img src="https://i0.wp.com/www.boznoslawoffice.com/wp-content/uploads/2015/09/no_avatar.jpg?fit=512%2C512&ssl=1" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" style="width:400px; height:500px;">
 	</div>
 
 </div>
