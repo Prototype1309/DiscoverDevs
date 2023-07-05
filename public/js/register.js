@@ -35,7 +35,7 @@ registrationForm.addEventListener('submit', async (e) => {
             password: reqPassword,
             location: reqLocation,
             picture_link: reqPictureLink,
-            technologies: checkedTechs
+            technologies: checkedTechs,
 
         })
     })
