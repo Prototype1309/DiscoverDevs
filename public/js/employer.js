@@ -9,6 +9,7 @@ registrationForm.addEventListener('submit', async (e) => {
     reqEmail,
     reqPassword,
     reqConfirm,
+    reqCompanyName,
     reqRole,
   ] = [
     e.target[0].value,
@@ -26,7 +27,6 @@ registrationForm.addEventListener('submit', async (e) => {
   console.log(reqCompanyName);
   console.log(reqEmail);
   console.log(reqPassword);
-  console.log(reqConfirm);
   console.log(reqRole);
   
   
