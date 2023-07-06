@@ -77,22 +77,41 @@ router.get('/logout', async (req, res) => {
   }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/profile', async (req, res) => {
+  const email = req.query.email;
+
   try {
-    const delEmpoyer = await EmployerUser.destroy({
-      where: {
-        id: req.params.id,
-      },
+    const deletedUser = await EmployerUser.destroy({
+      where: { email: req.session.email },
     });
-    if (!delEmpoyer) {
-      res.status(400).json({ message: 'Employer not found.' });
-      return;
+
+    if (deletedUser) {
+      res.status(200).json({ message: 'Profile deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'Profile not found' });
     }
-    res.json({ message: 'Employer deleted.' });
-  } catch (error) {
+  } catch (err) {
     console.error(err);
     res.status(500).json(err);
   }
 });
+
+// router.delete('/:id', async (req, res) => {
+//   try {
+//     const delEmpoyer = await EmployerUser.destroy({
+//       where: {
+//         id: req.params.id,
+//       },
+//     });
+//     if (!delEmpoyer) {
+//       res.status(400).json({ message: 'Employer not found.' });
+//       return;
+//     }
+//     res.json({ message: 'Employer deleted.' });
+//   } catch (error) {
+//     console.error(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

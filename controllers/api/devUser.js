@@ -68,13 +68,11 @@ router.post('/login', async (req, res) => {
       console.log('valid');
       req.session.loggedIn = true;
       req.session.email = req.body.email;
-      res
-        .status(200)
-        .json({
-          user: devUserData,
-          message: 'Successfully logged in',
-          loggedIn: req.session.loggedIn,
-        });
+      res.status(200).json({
+        user: devUserData,
+        message: 'Successfully logged in',
+        loggedIn: req.session.loggedIn,
+      });
     }
   } catch (err) {
     console.error(err);
@@ -146,21 +144,21 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete dev
-router.delete('/:id', async (req, res) => {
-  console.log('hello from delete');
+// Delete dev profile
+router.delete('/profile', async (req, res) => {
+  const email = req.query.email;
+
   try {
-    const delDev = await DevUser.destroy({
-      where: {
-        id: req.params.id,
-      },
+    const deletedUser = await DevUser.destroy({
+      where: { email: req.session.email },
     });
-    if (!delDev) {
-      res.status(400).json({ message: 'Developer not found.' });
-      return;
+
+    if (deletedUser) {
+      res.status(200).json({ message: 'Profile deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'Profile not found' });
     }
-    res.status(200).json({ message: 'Developer deleted.' });
-  } catch (error) {
+  } catch (err) {
     console.error(err);
     res.status(500).json(err);
   }
