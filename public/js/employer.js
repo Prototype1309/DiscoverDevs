@@ -6,11 +6,10 @@ registrationForm.addEventListener('submit', async (e) => {
   const [
     reqFirstName,
     reqLastName,
-    reqEmail,
     reqCompanyName,
+    reqEmail,
     reqPassword,
     reqConfirm,
-    reqCompanyName,
     reqRole,
   ] = [
     e.target[0].value,
@@ -18,15 +17,15 @@ registrationForm.addEventListener('submit', async (e) => {
     e.target[2].value,
     e.target[3].value,
     e.target[4].value,
-    e.target[5].value
-
-
+    e.target[5].value,
+    e.target[6].value,
   ];
   console.log(reqFirstName);
   console.log(reqLastName);
   console.log(reqCompanyName);
   console.log(reqEmail);
   console.log(reqPassword);
+  console.log(reqConfirm);
   console.log(reqRole);
   
   
