@@ -404,7 +404,6 @@ footer nav ul li a {
 
 @media (max-width: 767px) {
     #navbar-default.show {
-      display: block;
-      
+      display: block;     
   }
 }
