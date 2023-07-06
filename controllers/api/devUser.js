@@ -146,8 +146,8 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete dev
-router.delete('/:id', async (req, res) => {
+// Delete dev profile
+router.delete('/profile/:id', async (req, res) => {
   console.log('hello from delete');
   try {
     const delDev = await DevUser.destroy({
