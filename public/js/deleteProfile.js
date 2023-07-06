@@ -1,7 +1,7 @@
 const deleteButton = document.getElementById('deleteButton');
 deleteButton.addEventListener('click', () => {
   const userType = localStorage.getItem('discover-devs-user-type');
-  // const id = localStorage.getItem('discover-devs-user-id');
+  // const id = localStorage.getItem('discover-devs-user-email');
 
   fetch(`/api/${userType}/profile`, { method: 'DELETE' })
     .then((response) => {
