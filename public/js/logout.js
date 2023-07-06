@@ -3,7 +3,10 @@ let logoutButton = document.getElementById('logout-button')
 // Handle logout span button functionality & api call
 if (logoutButton) {
     logoutButton.addEventListener('click', async () => {
-        const response = await fetch('/api/devUser/logout', {
+
+        const userType = localStorage.getItem('discover-devs-user-type')
+        console.log(userType)
+        const response = await fetch(`/api/${userType}/logout`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json'}
         })
