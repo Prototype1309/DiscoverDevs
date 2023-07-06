@@ -1,4 +1,6 @@
 let registrationForm = document.querySelector('form')
+let userType
+
 
 registrationForm.addEventListener('submit', async (e) => {
 
@@ -46,8 +48,19 @@ registrationForm.addEventListener('submit', async (e) => {
         })
     })
 
+    
+
     if (createNewDev.ok) {
         console.log(createNewDev)
+
+        if (localStorage.getItem('discover-devs-user-type')) {
+            userType = localStorage.getItem('discover-devs-user-type')
+            console.log(`Returning user`)
+        } else {
+            console.log(`New user`)
+            localStorage.setItem('discover-devs-user-type','devUser')
+        }
+        
         document.location.replace('/devs')
     } else {
         console.log(response)

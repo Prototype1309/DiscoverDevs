@@ -1,7 +1,10 @@
 const deleteProfile = document.getElementById('deleteButton');
 
 deleteButton.addEventListener('click', () => {
-  fetch(`api/${localStorageObj}/:id`, { method: 'DELETE' })
+
+  const userType = localStorage.getItem('discover-devs-user-type')
+
+  fetch(`api/${userType}/:id`, { method: 'DELETE' })
     .then((response) => {
       if (response.ok) {
         console.log('Profile deleted successfully!');

@@ -40,6 +40,15 @@ registrationForm.addEventListener('submit', async (e) => {
   });
 
   if (createNewEmployer.ok) {
+
+    if (localStorage.getItem('discover-devs-user-type')) {
+      userType = localStorage.getItem('discover-devs-user-type')
+      console.log(`Returning user`)
+    } else {
+      console.log(`New user`)
+      localStorage.setItem('discover-devs-user-type','employerUser')
+    }
+
     console.log(createNewEmployer);
     document.location.replace('/devs');
   } else {
