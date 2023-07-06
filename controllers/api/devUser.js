@@ -68,13 +68,11 @@ router.post('/login', async (req, res) => {
       console.log('valid');
       req.session.loggedIn = true;
       req.session.email = req.body.email;
-      res
-        .status(200)
-        .json({
-          user: devUserData,
-          message: 'Successfully logged in',
-          loggedIn: req.session.loggedIn,
-        });
+      res.status(200).json({
+        user: devUserData,
+        message: 'Successfully logged in',
+        loggedIn: req.session.loggedIn,
+      });
     }
   } catch (err) {
     console.error(err);
@@ -152,7 +150,7 @@ router.delete('/profile', async (req, res) => {
 
   try {
     const deletedUser = await DevUser.destroy({
-      where: { email: email },
+      where: { email: req.session.email },
     });
 
     if (deletedUser) {
