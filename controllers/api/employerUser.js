@@ -1,24 +1,11 @@
 const router = require('express').Router();
 const EmployerUser = require('../../models/EmployerUser');
+const validator = require('validator')
 
 router.get('/', async (req, res) => {
   try {
     const employerUser = await EmployerUser.findAll({});
     res.status(200).json(employerUser);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-});
-
-router.get('/:id', async (req, res) => {
-  try {
-    const getEmployer = await EmployerUser.findByPk(req.params.id);
-    if (!getEmployer) {
-      res.status(400).json({ message: 'Employer not found.' });
-      return;
-    }
-    res.json(getEmployer);
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
@@ -33,6 +20,65 @@ router.post('/', async (req, res) => {
     console.error(err);
   }
 });
+
+// Login
+router.post('/login', async (req, res) => {
+
+  if (!validator.isEmail(req.body.email)) {
+    console.log("not a valid email")
+    res.status(500)
+    return
+  }
+
+  try {
+
+    const empUserData = await EmployerUser.findOne({
+      where: {
+        email: req.body.email
+      }
+    })
+
+    if (!empUserData) {
+      res.status(404).json({message: 'Incorrect email or password. Please try again'})
+      return
+    }
+
+    const passwordIsValid = await empUserData.checkPassword(req.body.password)
+
+    if (passwordIsValid) {
+      console.log('valid')
+      req.session.loggedIn = true;
+      req.session.email = req.body.email
+      res.status(200).json({user: empUserData, message: "Successfully logged in", loggedIn: req.session.loggedIn})
+    }
+
+  } catch (err) {
+    console.error(err)
+    res.status(500).json(err)
+  }
+})
+
+// Logout
+router.get('/logout', async (req, res) => {
+  console.log(req.session)
+  try {
+      console.log('1')
+      if (req.session.loggedIn) {
+        console.log('2')
+          req.session.destroy(() => {
+              res.json({message: 'Successfully logged out'})
+              res.status(204).end()
+          })
+      } else {
+          console.log('3')
+          res.json({message: 'You\'re not logged in'})
+          res.status(404).end()
+      }
+  } catch (err) {
+      console.log(err)
+      res.status(500).json(err)
+  }
+})
 
 router.delete('/:id', async (req, res) => {
   try {
@@ -51,5 +97,7 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 module.exports = router;
