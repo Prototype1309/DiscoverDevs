@@ -373,6 +373,7 @@ body>div {
 
 footer {
   background-color: #111827;
+  display: block;
   text-align: center;
 }
 
