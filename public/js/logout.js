@@ -5,7 +5,7 @@ if (logoutButton) {
     logoutButton.addEventListener('click', async () => {
 
         const userType = localStorage.getItem('discover-devs-user-type')
-
+        console.log(userType)
         const response = await fetch(`/api/${userType}/logout`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json'}
