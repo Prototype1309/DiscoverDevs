@@ -6,9 +6,10 @@ registrationForm.addEventListener('submit', async (e) => {
   const [
     reqFirstName,
     reqLastName,
-    reqCompanyName,
     reqEmail,
     reqPassword,
+    reqConfirm,
+    reqCompanyName,
     reqRole,
   ] = [
     e.target[0].value,
@@ -20,13 +21,18 @@ registrationForm.addEventListener('submit', async (e) => {
     e.target[6].value,
   ];
 
+  if (reqPassword != reqConfirm) {
+    alert('Passwords don\'t match')
+    return
+  }
+
   const createNewEmployer = await fetch('/api/employerUser', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       first_name: reqFirstName,
       last_name: reqLastName,
-      company_name: reqCompanyName,
+      company: reqCompanyName,
       email: reqEmail,
       password: reqPassword,
       role: reqRole,

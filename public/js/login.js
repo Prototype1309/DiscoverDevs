@@ -18,8 +18,5 @@ loginButton.addEventListener('click', async (e) => {
         } else {
             console.log(response)
         }
-
     }
-    
-
 })
