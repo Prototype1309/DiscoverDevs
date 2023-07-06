@@ -1,0 +1,46 @@
+
+<div class="filter-bar">
+    <div id="filter-bar">
+        <div class="filter-form">
+            <input type="text" id="location" placeholder="Location">
+            <select id="experience">
+                <option value="">Years of Experience</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15+</option>
+            </select>
+            <div class="list-of-techs">
+                {{#each renderTechs as |filtertechs|}}
+                    {{> filtertechs}}
+                {{/each}}
+            </div>
+        </div>
+        <button class="filter-btn" onclick="filterResults()">Filter</button>
+    </div>
+
+    <div class="columns-3">
+        <div class="all-devs">
+            {{#each filteredDevs as |dev|}}
+                {{>dev}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="/js/filter.js"></script>
+
+
+
+

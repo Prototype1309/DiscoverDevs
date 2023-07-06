@@ -1,11 +1,22 @@
-<div class="wrapper active">
-  <div class="form-wrapper sign-up">
-      <form action="">
-          <h2>Sign Up</h2>
+<div class="wrapper">
+      <form class="wrapper-registration">
+          <h2><b>Sign up</b></h2>
           <div class="input-group">
               <input type="text" required>
-              <label for="">Username</label>
+              <label for="">First name</label>
           </div> 
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Last name</label>
+          </div>
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Years of Experience</label>
+          </div>
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Location</label>
+          </div>
           <div class="input-group">
               <input type="email" required>
               <label for="">Email</label>
@@ -14,15 +25,27 @@
               <input type="password" required>
               <label for="">Password</label>
           </div>
+           <div class="input-group">
+              <input type="password" required>
+              <label for="">Confirm Password</label>
+          </div>
+          <div class="input-group">
+              <input type="text" required>
+              <label for="">Input a URL of your Profile Picture</label>
+          </div> 
+          <h3><b>Your Languages</b></h3>
+        <div id="tech-form"> 
+                {{#each techs as |registertech|}}
+                    {{>registertech}}
+                {{/each}}
+          </div>
           <div class="remember">
               <label><input type="checkbox"> I agree to the terms & conditions</label>
           </div>
-          <button type="submit">Sign Up</button>
+          <button class="btn" type="submit"><p>Sign Up</p></button>
           <div class="signUp-link">
-              <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+              <p>Already have an account? <a href="login" class="signInBtn-link">Sign In</a></p>
           </div>
-      </form>
-  </div>
+      </form>  
 </div>
-
 <script src="/js/register.js"></script>
