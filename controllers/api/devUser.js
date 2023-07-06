@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { DevUser, Technology, UserTech } = require('../../models');
-const bcrypt = require('bcrypt')
-const validator = require('validator')
-
+const bcrypt = require('bcrypt');
+const validator = require('validator');
 
 // Get all devs
 router.get('/', async (req, res) => {
@@ -26,58 +25,62 @@ router.get('/', async (req, res) => {
 // Logout
 router.get('/logout', async (req, res) => {
   try {
-      if (req.session.loggedIn) {
-          req.session.destroy(() => {
-              res.json({message: 'Successfully logged out'})
-              res.status(204).end()
-          })
-      } else {
-          res.json({message: 'You\'re not logged in'})
-          res.status(404).end()
-      }
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.json({ message: 'Successfully logged out' });
+        res.status(204).end();
+      });
+    } else {
+      res.json({ message: "You're not logged in" });
+      res.status(404).end();
+    }
   } catch (err) {
-      console.log(err)
-      res.status(500).json(err)
+    console.log(err);
+    res.status(500).json(err);
   }
-})
+});
 
 // Login authentication
 router.post('/login', async (req, res) => {
-
   if (!validator.isEmail(req.body.email)) {
-    console.log("not a valid email")
-    res.status(500)
-    return
+    console.log('not a valid email');
+    res.status(500);
+    return;
   }
 
   try {
-
     const devUserData = await DevUser.findOne({
       where: {
-        email: req.body.email
-      }
-    })
+        email: req.body.email,
+      },
+    });
 
     if (!devUserData) {
-      res.status(404).json({message: 'Incorrect email or password. Please try again'})
-      return
+      res
+        .status(404)
+        .json({ message: 'Incorrect email or password. Please try again' });
+      return;
     }
 
-    const passwordIsValid = await devUserData.checkPassword(req.body.password)
+    const passwordIsValid = await devUserData.checkPassword(req.body.password);
 
     if (passwordIsValid) {
-      console.log('valid')
+      console.log('valid');
       req.session.loggedIn = true;
-      req.session.email = req.body.email
-      res.status(200).json({user: devUserData, message: "Successfully logged in", loggedIn: req.session.loggedIn})
+      req.session.email = req.body.email;
+      res
+        .status(200)
+        .json({
+          user: devUserData,
+          message: 'Successfully logged in',
+          loggedIn: req.session.loggedIn,
+        });
     }
-
   } catch (err) {
-    console.error(err)
-    res.status(500).json(err)
+    console.error(err);
+    res.status(500).json(err);
   }
-})
-
+});
 
 // Get dev by id
 router.get('/:id', async (req, res) => {
@@ -103,13 +106,13 @@ router.post('/', async (req, res) => {
     delete req.body.technologies;
 
     bcrypt.hash(req.body.password, 1, (err, hash) => {
-      req.body.password = hash  
-    })
+      req.body.password = hash;
+    });
 
     const postDev = await DevUser.create(req.body);
 
-    console.log(postDev)
-  
+    console.log(postDev);
+
     const insertTech = tech.map((singleTech) => {
       return { developerId: postDev.id, technologyId: singleTech };
     });
