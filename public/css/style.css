@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  max-width: 1800px;
+  max-width: 2400px;
 }
 
 main {
@@ -214,6 +214,10 @@ form h2 {
 
 .signUp-link p a:hover {
   text-decoration: underline;
+}
+
+#profile-tech > h2 {
+  color:black
 }
 
 .dollar-amount {
