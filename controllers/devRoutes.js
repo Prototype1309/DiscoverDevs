@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const DevUser = require('../models/DevUser');
 const Technology = require('../models/Technology');
-const auth = require('../utils/auth')
+const auth = require('../utils/auth');
 const { Op } = require('sequelize');
 
 router.get('/', auth, async (req, res) => {
@@ -9,26 +9,26 @@ router.get('/', auth, async (req, res) => {
     let techQueries;
 
     if (req.query.tech) {
-      console.log(typeof req.query.tech.length)
-      techQueries = typeof req.query.tech != 'string' ? req.query.tech : [req.query.tech];
+      console.log(typeof req.query.tech.length);
+      techQueries =
+        typeof req.query.tech != 'string' ? req.query.tech : [req.query.tech];
       delete req.query.tech;
     }
- 
-  
 
     let yrs_experience = req.query.yrs_experience;
-    delete req.query.yrs_experience; 
+    delete req.query.yrs_experience;
 
-    if (yrs_experience) { 1
+    if (yrs_experience) {
+      1;
       req.query.yrs_experience = { [Op.gt]: yrs_experience - 1 };
     }
-    
-    const listOfDevs = await DevUser.findAll({ 
+
+    const listOfDevs = await DevUser.findAll({
       where: {
-        ...req.query,  
+        ...req.query,
       },
       include: [
-        { 
+        {
           model: Technology,
           attributes: ['id', 'name', 'badge_element'],
         },
@@ -38,7 +38,7 @@ router.get('/', auth, async (req, res) => {
 
     let filteredDevs = devs;
     if (techQueries) {
-      console.log(techQueries)
+      console.log(techQueries);
 
       filteredDevs = [];
       devs.forEach((dev) => {
@@ -64,7 +64,7 @@ router.get('/', auth, async (req, res) => {
     res.render('devs', {
       filteredDevs,
       signedIn: req.session.loggedIn,
-      renderTechs
+      renderTechs,
     });
   } else {
     const listOfDevs = await DevUser.findAll({
@@ -84,14 +84,14 @@ router.get('/', auth, async (req, res) => {
     res.render('devs', {
       filteredDevs,
       signedIn: req.session.loggedIn,
-      renderTechs
+      renderTechs,
     });
   }
 });
 
 router.get('/dev/:id', auth, (req, res) => {
   res.render('devs', {
-    signedIn: req.session.loggedIn
+    signedIn: req.session.loggedIn,
   });
 });
 
