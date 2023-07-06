@@ -46,7 +46,7 @@ router.put('/:id', auth, async (req, res) => {
 
     await user.save();
 
-    res.render('userProfile', { user, signedIn: req.session.loggedIn });
+    res.render('profile', { user, signedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
