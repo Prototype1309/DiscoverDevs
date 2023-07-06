@@ -62,15 +62,12 @@ router.post('/login', async (req, res) => {
 router.get('/logout', async (req, res) => {
   console.log(req.session)
   try {
-      console.log('1')
       if (req.session.loggedIn) {
-        console.log('2')
           req.session.destroy(() => {
               res.json({message: 'Successfully logged out'})
               res.status(204).end()
           })
       } else {
-          console.log('3')
           res.json({message: 'You\'re not logged in'})
           res.status(404).end()
       }
@@ -97,7 +94,5 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;
