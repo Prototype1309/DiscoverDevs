@@ -1,12 +1,15 @@
 const deleteButton = document.getElementById('deleteButton');
-deleteButton.addEventListener('click', () => {
+deleteButton.addEventListener('click', async () => {
   const userType = localStorage.getItem('discover-devs-user-type');
-  // const id = localStorage.getItem('discover-devs-user-email');
+  const userEmail = localStorage.getItem('discover-devs-user-email');
 
-  fetch(`/api/${userType}/profile`, { method: 'DELETE' })
+  await fetch(`/api/${userType}/profile?email=${userEmail}`, {
+    method: 'DELETE',
+  })
     .then((response) => {
       if (response.ok) {
         console.log('Profile deleted successfully!');
+        document.location.replace('/');
       } else {
         console.error('Failed to delete profile.');
       }

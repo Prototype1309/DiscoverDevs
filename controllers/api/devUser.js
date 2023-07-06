@@ -147,22 +147,22 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete dev profile
-router.delete('/api/:userType/profile', async (req, res) => {
-  // console.log('hello from delete');
+router.delete('/profile', async (req, res) => {
+  const email = req.query.email;
+
   try {
-    const delDev = await DevUser.destroy({
-      where: {
-        email: req.session.email,
-      },
+    const deletedUser = await DevUser.destroy({
+      where: { email: email },
     });
-    if (!delDev) {
-      res.status(400).json({ message: 'Developer not found.' });
-      return;
+
+    if (deletedUser) {
+      res.status(200).json({ message: 'Profile deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'Profile not found' });
     }
-    res.status(200).json({ message: 'Developer deleted.' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json(error);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
   }
 });
 
