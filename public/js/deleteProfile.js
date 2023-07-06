@@ -1,7 +1,7 @@
 const deleteProfile = document.getElementById('deleteButton');
 
 deleteButton.addEventListener('click', () => {
-  fetch('/api/profile/:id', { method: 'DELETE' })
+  fetch(`api/${localStorageObj}/:id`, { method: 'DELETE' })
     .then((response) => {
       if (response.ok) {
         console.log('Profile deleted successfully!');
