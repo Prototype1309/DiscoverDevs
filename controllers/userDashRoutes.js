@@ -2,8 +2,6 @@ const router = require('express').Router();
 const DevUser = require('../models/DevUser');
 const auth = require('../utils/auth');
 
-// Need to res.render both of the below routes; make sure to include "signedIn: req.session.loggedIn"
-
 router.get('/:id', auth, async (req, res) => {
   try {
     const userId = req.params.id;
@@ -13,7 +11,7 @@ router.get('/:id', auth, async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    res.json(user);
+    res.render('userProfile', { user, signedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
@@ -48,7 +46,7 @@ router.put('/:id', auth, async (req, res) => {
 
     await user.save();
 
-    res.json({ message: 'User information updated successfully!' });
+    res.render('userProfile', { user, signedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
