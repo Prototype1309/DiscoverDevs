@@ -7,7 +7,6 @@ registrationForm.addEventListener('submit', async (e) => {
     reqFirstName,
     reqLastName,
     reqEmail,
-    reqCompanyName,
     reqPassword,
     reqConfirm,
     reqCompanyName,
@@ -18,7 +17,8 @@ registrationForm.addEventListener('submit', async (e) => {
     e.target[2].value,
     e.target[3].value,
     e.target[4].value,
-    e.target[5].value
+    e.target[5].value,
+    e.target[6].value
 
 
   ];
