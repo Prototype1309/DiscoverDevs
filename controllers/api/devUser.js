@@ -154,7 +154,16 @@ router.delete('/profile', async (req, res) => {
     });
 
     if (deletedUser) {
+
+      if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.json({message: 'Successfully logged out'})
+            res.status(204).end()
+        })
+     } else {
       res.status(200).json({ message: 'Profile deleted successfully' });
+     }
+
     } else {
       res.status(404).json({ message: 'Profile not found' });
     }

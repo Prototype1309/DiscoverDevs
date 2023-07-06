@@ -51,7 +51,7 @@ const developerData = [
     location: 'Los Angeles',
     email: 'HStarris@msn.org',
     password: '123454321',
-    picture_link: '/images/devs/woman3',
+    picture_link: '/images/devs/woman8',
   },
   {
     first_name: 'Laura',
@@ -78,7 +78,7 @@ const developerData = [
     location: 'Tel-Aviv',
     email: 'BJohde@unc.edu',
     password: '123454321',
-    picture_link: '/images/devs/man5',
+    picture_link: '/images/devs/man8',
   },
   {
     first_name: 'Wusan',
@@ -96,7 +96,7 @@ const developerData = [
     location: 'Durham',
     email: 'SHyles@duke.edu',
     password: '123454321',
-    picture_link: '/images/devs/man6',
+    picture_link: '/images/devs/man9',
   },
   {
     first_name: 'Com',
@@ -123,7 +123,7 @@ const developerData = [
     location: 'Bismarck',
     email: 'BJezos@hotmail.us',
     password: '123454321',
-    picture_link: '/images/devs/woman7',
+    picture_link: '/images/devs/woman9',
   }
 ];
 
