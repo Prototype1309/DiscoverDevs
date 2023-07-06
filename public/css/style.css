@@ -344,7 +344,8 @@ body>div {
 }
 
 .list-of-techs {
-  background-color: white;
+
+  background-color: transparent;
   border-radius: 5px;
   display: flex;
   height: 150px;
@@ -358,6 +359,7 @@ body>div {
 }
 
 .list-of-techs > * {
+  color: white;
   width: 15%;
 }
 
