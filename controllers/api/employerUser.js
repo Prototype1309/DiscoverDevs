@@ -86,7 +86,16 @@ router.delete('/profile', async (req, res) => {
     });
 
     if (deletedUser) {
+
+      if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.json({message: 'Successfully logged out'})
+            res.status(204).end()
+        })
+     } else {
       res.status(200).json({ message: 'Profile deleted successfully' });
+     }
+
     } else {
       res.status(404).json({ message: 'Profile not found' });
     }
@@ -96,22 +105,5 @@ router.delete('/profile', async (req, res) => {
   }
 });
 
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const delEmpoyer = await EmployerUser.destroy({
-//       where: {
-//         id: req.params.id,
-//       },
-//     });
-//     if (!delEmpoyer) {
-//       res.status(400).json({ message: 'Employer not found.' });
-//       return;
-//     }
-//     res.json({ message: 'Employer deleted.' });
-//   } catch (error) {
-//     console.error(err);
-//     res.status(500).json(err);
-//   }
-// });
 
 module.exports = router;
