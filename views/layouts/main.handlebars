@@ -1,17 +1,16 @@
 <html lang='en'>
 
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>DiscoverDevs</title>
-    <script
-      src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js'
-    ></script>
-    <script src='https://cdn.tailwindcss.com'></script>
-    <link rel='stylesheet' href='css/style.css' />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>DiscoverDevs</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js'></script>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <link rel='stylesheet' href='css/style.css' />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
 
-  </head>
+</head>
+
 
   <body>
     <header>
@@ -96,22 +95,41 @@
 </nav>
 
     </header>
+            <li>
+              <span id='delete-button'
+                class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Delete
+                Profile</span>
+            </li>
 
-    <main> {{{body}}}</main>
+            {{!-- <li>
+              <span id='update-button'
+                class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Update
+                Profile</span>
+            </li> --}}
+            
+            {{/if}}
 
-  </body>
-  <script src='/js/logout.js'></script>
-
-  <footer>
-    <h1>Contact Us</h1>
-    <nav>
-      <ul>
-        <li><a href='mailto:cwbatte2@gmail.com'>Chad</a></li>
-        <li><a href='mailto:jordan3313.lj@gmail.com'>Laura</a></li>
-        <li><a href='mailto:simo.hourri@gmail.com'>Mohamed</a></li>
-        <li><a href='mailto:st3phanie.harris@gmail.com'>Stephanie</a></li>
-      </ul>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </footer>
+  </header>
+
+  <main> {{{body}}}</main>
+
+</body>
+<script src='/js/logout.js'></script>
+
+<footer>
+  <h1>Contact Us</h1>
+  <nav>
+    <ul>
+      <li><a href='mailto:cwbatte2@gmail.com'>Chad</a></li>
+      <li><a href='mailto:jordan3313.lj@gmail.com'>Laura</a></li>
+      <li><a href='mailto:simo.hourri@gmail.com'>Mohamed</a></li>
+      <li><a href='mailto:st3phanie.harris@gmail.com'>Stephanie</a></li>
+    </ul>
+  </nav>
+</footer>
 
 </html>

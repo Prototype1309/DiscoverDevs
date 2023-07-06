@@ -11,7 +11,7 @@ router.get('/:id', auth, async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    res.render('userProfile', { user, signedIn: req.session.loggedIn });
+    res.render('profile', { user, signedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
@@ -46,7 +46,7 @@ router.put('/:id', auth, async (req, res) => {
 
     await user.save();
 
-    res.render('userProfile', { user, signedIn: req.session.loggedIn });
+    res.render('profile', { user, signedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
