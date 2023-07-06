@@ -373,29 +373,32 @@ body>div {
 
 footer {
   background-color: #111827;
-  display: block;
   text-align: center;
+  justify-content: space-around;
 }
 
 footer h1 {
   color: white;
-  display: inline-block;
   font-size: 24px;
   padding-bottom: 1rem;
   font-weight: bold;
 }
 
+footer nav {
+  justify-content:center;
+}
+
 footer nav ul {
-  list-style: none;
   display: flex;
   justify-content: space-around;
+  list-style: none;
   font-size: 20px;
   padding-bottom: 2rem;
 }
 
 footer nav ul li {
   color: white;
-
+  margin: 0 10px
 }
 
 footer nav ul li a {
@@ -403,8 +406,17 @@ footer nav ul li a {
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
-    #navbar-default.show {
-      display: block;     
+@media screen and (max-width: 768px) {
+  body footer nav ul {
+    flex-direction: column;
+    justify-content:center;
+    
+  }
+  body footer nav ul li {
+    margin: 10px 0;
   }
 }
+
+
+
+
