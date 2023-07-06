@@ -19,8 +19,6 @@ registrationForm.addEventListener('submit', async (e) => {
     e.target[4].value,
     e.target[5].value,
     e.target[6].value
-
-
   ];
   console.log(reqFirstName);
   console.log(reqLastName);
@@ -29,8 +27,6 @@ registrationForm.addEventListener('submit', async (e) => {
   console.log(reqPassword);
   console.log(reqRole);
   
-  
-
   if (reqPassword != reqConfirm) {
     alert('Passwords don\'t match')
     return

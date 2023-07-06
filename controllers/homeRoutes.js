@@ -43,14 +43,22 @@ router.get('/profile', async (req, res) => {
     where: {
       email: req.session.email,
     },
+    include: [
+      {
+        model: Technology,
+        attributes: ['id', 'name', 'badge_element'],
+      },
+    ],
   }); 
 
-  devUserData = devUserData.dataValues
+  const devData = devUserData.get({plain: true})
 
-  console.log(devUserData)
+
+  // console.log(devUserData)
+  console.log(devData)
 
   res.render('profile', {
-    devUserData,
+    devData,
     signedIn: req.session.loggedIn,
   });
 });
