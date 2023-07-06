@@ -161,8 +161,8 @@ router.delete('/:id', async (req, res) => {
     }
     res.status(200).json({ message: 'Developer deleted.' });
   } catch (error) {
-    console.error(err);
-    res.status(500).json(err);
+    console.error(error);
+    res.status(500).json(error);
   }
 });
 
