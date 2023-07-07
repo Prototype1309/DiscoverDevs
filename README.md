@@ -75,6 +75,7 @@ If you need assistance or have any questions, please contact our support team. W
 ![Register](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/83662efa-9d38-44a2-87a0-1948f05c0d85)
 ![login](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/bedd6283-9b16-4890-9b6c-bc28de6813a7)
 ![Devs](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/c273df95-4f85-4c45-9d68-4a38af521f6b)
+![profile](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/fb1442a8-1bfe-45e6-acc3-51cd28b11add)
 
 ## Application
 To access our application you can click on [this link](https://discoverdevs-2aa18af2a0dc.herokuapp.com/home). 
