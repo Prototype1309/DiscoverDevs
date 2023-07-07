@@ -75,6 +75,7 @@ If you need assistance or have any questions, please contact our support team. W
 ![Register](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/83662efa-9d38-44a2-87a0-1948f05c0d85)
 ![login](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/bedd6283-9b16-4890-9b6c-bc28de6813a7)
 ![Devs](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/c273df95-4f85-4c45-9d68-4a38af521f6b)
+![profile](https://github.com/Prototype1309/DiscoverDevs/assets/126029841/fb1442a8-1bfe-45e6-acc3-51cd28b11add)
 
 ## Application
 To access our application you can click on [this link](https://discoverdevs-2aa18af2a0dc.herokuapp.com/home). 
@@ -83,7 +84,7 @@ To access our application you can click on [this link](https://discoverdevs-2aa1
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Sources
-Various resources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. We also referenced documentation for our technologies to properly understand their functionalities. A bulk of help did come from the resources provided by the boot camp itself; past lessons, homework, mini-projects, and other communicated resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
+Various resources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. When working with the profile.handlebars, sources that were used to create the tech icons were simpleicons.org & svgrepo.com. Alongside those, the profile.handlebars referenced ['tippy'](https://atomiks.github.io/tippyjs/) & ['popper'](https://popper.js.org/docs/v2/2). We also referenced documentation for our technologies to properly understand their functionalities. A bulk of help did come from the resources provided by the boot camp itself; past lessons, homework, mini-projects, and other communicated resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
 
 ## Contact
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn](https://www.linkedin.com/in/chad-batten-b712328a/) -- [Email](cwbatte2@gmail.com)
