@@ -83,7 +83,7 @@ To access our application you can click on [this link](https://discoverdevs-2aa1
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Sources
-Various resources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. We also referenced documentation for our technologies to properly understand their functionalities. A bulk of help did come from the resources provided by the boot camp itself; past lessons, homework, mini-projects, and other communicated resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
+Various resources were used in creating this application. Some of those resources included websites including W3Schools, MDN, StackOverflow, and DEV Community. When working with the profile.handlebars, sources that were used to create the tech icons were simpleicons.org & svgrepo.com. Alongside those, the profile.handlebars referenced ['tippy'](https://atomiks.github.io/tippyjs/) & ['popper'](https://popper.js.org/docs/v2/2). We also referenced documentation for our technologies to properly understand their functionalities. A bulk of help did come from the resources provided by the boot camp itself; past lessons, homework, mini-projects, and other communicated resources. We also garnered assistance from our TAs in the course when we were stuck on a particular item.
 
 ## Contact
 Chad: [GitHub](https://github.com/obelisk477) -- [LinkedIn](https://www.linkedin.com/in/chad-batten-b712328a/) -- [Email](cwbatte2@gmail.com)
