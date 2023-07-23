@@ -1,46 +1,40 @@
-
-<div class="filter-bar">
+<div class="max-w-7xl m-auto grid lg:grid-cols-4">
+  <div class="order-2 lg:order-1 lg:col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 justify-center">
+    {{#each filteredDevs as |dev|}}
+    {{>dev}}
+    {{/each}}
+  </div>
+  <div class="order-1 lg:order-2 lg:col-span-1">
     <div id="filter-bar">
-        <div class="filter-form">
-            <input type="text" id="location" placeholder="Location">
-            <select id="experience">
-                <option value="">Years of Experience</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15+</option>
-            </select>
-            <div class="list-of-techs">
-                {{#each renderTechs as |filtertechs|}}
-                    {{> filtertechs}}
-                {{/each}}
-            </div>
+      <div class="filter-form">
+        <input type="text" id="location" placeholder="Location">
+        <select id="experience">
+          <option value="">Years of Experience</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15+</option>
+        </select>
+        <div class="list-of-techs">
+          {{#each renderTechs as |filtertechs|}}
+          {{> filtertechs}}
+          {{/each}}
         </div>
         <button class="filter-btn" onclick="filterResults()">Filter</button>
+      </div>
     </div>
-
-    <div class="columns-3">
-        <div class="all-devs">
-            {{#each filteredDevs as |dev|}}
-                {{>dev}}
-            {{/each}}
-        </div>
-    </div>
+  </div>
 </div>
 
 <script src="/js/filter.js"></script>
-
-
-
-

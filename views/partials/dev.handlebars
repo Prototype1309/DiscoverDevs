@@ -1,26 +1,26 @@
-<div class="wrapper dev">
-   <div class="form-wrapper inner-dev">
-      <img class="dev-image" src="{{picture_link}}.jpg" alt="{{first_name}} {{last_name}}'s profile picture">
-      <h2>{{first_name}} {{last_name}}</h2>
-      <div class="all-dev-info">
-         <div class="each-tech-list">
-            {{#each technologies as |tech|}}
-               {{>tech}}
-            {{/each}}
-         </div>
-         <div class="other-info">
-            <div>
-               <h3>Location:</h3>
-               <h3>{{location}}</h3>
-            </div>
-            <div>
-               <h3>Experience:</h3>
-               <h3>{{yrs_experience}} yrs</h3>
-            </div>
-         </div>
-   </div>
-   <div class="contact-dev">
-      📧 <a href="mailto:{{email}}">Contact</a>
-   </div>
-   </div>
+<div class="text-white bg-black w-full lg:max-w-sm h-[35rem] p-4 rounded-2xl shadow-custom">
+  <div class="flex flex-col items-center justify-between m-auto w-full h-full max-w-[17.5rem]">
+    <img class="dev-image" src="{{picture_link}}.jpg" alt="{{first_name}} {{last_name}}'s profile picture">
+    <h2 class="text-2xl">{{first_name}} {{last_name}}</h2>
+    <div class="flex justify-center items-center w-full gap-4">
+      <div class="w-1/2 text-left flex-wrap px-2">
+        {{#each technologies as |tech|}}
+        {{>tech}}
+        {{/each}}
+      </div>
+      <div class="w-1/2 inline-block">
+        <div class="mb-2">
+          <p class="font-bold tracking-wide">Location:</p>
+          <p class="font-thin">{{location}}</p>
+        </div>
+        <div>
+          <p class="font-bold tracking-wide">Experience:</p>
+          <p class="font-thin">{{yrs_experience}} yrs</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full p-4 bg-[#232f82] rounded text-center">
+      📧<a class='text-xl ml-4' href="mailto:{{email}}">Contact</a>
+    </div>
+  </div>
 </div>

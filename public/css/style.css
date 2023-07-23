@@ -15,32 +15,29 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  max-width: 2400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: column;
-  margin-top: 50px;
-  margin-bottom: 45rem;
+  flex-grow: 1;
+  margin: 3rem 0;
+}
+
+header,
+footer {
+  width: 100%;
 }
 
 .wrapper {
-  place-items: center;
-  text-align: center;
-  position: relative;
-  width: 20rem;
-  height: 35rem;
   background: #000;
+  width: 90%;
   box-shadow: 0 0 50px #0ef;
   border-radius: 20px;
-  padding: 40px;
-  overflow: hidden;
-  margin-bottom: 18rem;
-  padding-top: 5rem;
-  margin-top: 50px;
+  margin: 0 auto;
+  padding: 2.5rem;
 }
 
 .wrapper-home {
@@ -50,7 +47,6 @@ main {
   color: white;
   border-radius: 20px;
   width: 600px;
-  margin-top: 50px;
   box-shadow: 0 0 20px #0ef;
 }
 
@@ -74,13 +70,9 @@ main {
 }
 
 .form-wrapper {
-  overflow-y: scroll;
-  overflow-x: hidden;
   display: block;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   transition: 1s ease-in-out;
 }
 
@@ -90,8 +82,7 @@ main {
 
 .wrapper-registration {
   overflow-y: scroll;
-  overflow-x: hidden;
-  height: 450px;
+  height: 450px
 }
 
 .wrapper-registration::-webkit-scrollbar {
@@ -116,7 +107,7 @@ main {
   top: 10px;
 }
 
-.all-devs > .wrapper {
+.all-devs>.wrapper {
   padding: 20px 15px 15px 25px;
 }
 
@@ -216,8 +207,8 @@ form h2 {
   text-decoration: underline;
 }
 
-#profile-tech > h2 {
-  color:black
+#profile-tech>h2 {
+  color: black
 }
 
 .dollar-amount {
@@ -235,7 +226,7 @@ form h2 {
 .inner-dev h2 {
   margin: 0 10%;
   font-size: 1.5rem;
-  
+
 }
 
 .tech-image {
@@ -249,7 +240,7 @@ form h2 {
 }
 
 .dev {
-  margin: 0 40px 30px;
+  /* margin: 0 40px 30px; */
   color: white;
 }
 
@@ -263,8 +254,6 @@ body>div {
   margin: 40px;
 }
 
-
-
 #filter-bar {
   display: flex;
   justify-content: space-around;
@@ -276,18 +265,30 @@ body>div {
 
 #filter-bar input[type="text"],
 #filter-bar select {
-  margin-right: 10px;
   padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 .filter-form {
+  padding: 1rem;
   display: flex;
-  flex-grow: 1 0 100%;
-  flex-wrap: wrap;
-  width: 80%;
+  flex-direction: column;
+  flex: 1 0 100%;
+}
 
+.filter-form>input,
+.filter-form>select {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.455);
 }
 
 .all-dev-info {
@@ -302,36 +303,31 @@ body>div {
   display: inline-block;
 }
 
-.other-info > * {
+.other-info>* {
   margin-bottom: 15px;
 }
 
 .each-tech-list {
   width: 50%;
-  text-align:left;
+  text-align: left;
   display: inline-block;
 
 }
 
-.each-tech-list > * {
+.each-tech-list>* {
   width: 100%;
   margin: 6px 0;
 }
 
 
-.each-tech-list svg, .each-tech-list p {
+.each-tech-list svg,
+.each-tech-list p {
   display: inline-block;
   margin: 0;
 }
 
 #results {
   margin-top: 60px;
-}
-
-.filter-btn {
-  color: white;
-  width: 150px;
-  background-color: rgba(255, 255, 255, 0.455);
 }
 
 #tech-form {
@@ -350,29 +346,15 @@ body>div {
 }
 
 .list-of-techs {
-
   background-color: transparent;
-  border-radius: 5px;
-  display: flex;
-  height: 150px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  margin: 20px;
-  margin-top: 0;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
 }
 
-.list-of-techs > * {
+.list-of-techs>* {
   color: white;
   width: 15%;
-}
-
-#location, #experience {
-  flex: 1 0 45%;
-  height: 40px;
-  margin: 20px;
 }
 
 footer {
@@ -389,7 +371,7 @@ footer h1 {
 }
 
 footer nav {
-  justify-content:center;
+  justify-content: center;
 }
 
 footer nav ul {
@@ -403,7 +385,6 @@ footer nav ul {
 footer nav ul li {
   color: white;
   margin: 0 10px
-
 }
 
 footer nav ul li a {
@@ -414,9 +395,10 @@ footer nav ul li a {
 @media screen and (max-width: 768px) {
   body footer nav ul {
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
 
   }
+
   body footer nav ul li {
     margin: 10px 0;
   }
