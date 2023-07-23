@@ -115,9 +115,14 @@ router.post('/', async (req, res) => {
       return { developerId: postDev.id, technologyId: singleTech };
     });
     console.log(insertTech);
-    const devTech = await UserTech.bulkCreate(insertTech);
-
-    res.status(200).json(postDev);
+    await UserTech.bulkCreate(insertTech);
+      req.session.loggedIn = true;
+      req.session.email = req.body.email;
+      res.status(200).json({
+        user: postDev,
+        message: 'Successfully registered',
+        loggedIn: req.session.loggedIn,
+      });
   } catch (err) {
     console.error(err);
   }

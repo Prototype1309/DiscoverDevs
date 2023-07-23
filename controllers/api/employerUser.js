@@ -15,7 +15,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const postEmployer = await EmployerUser.create(req.body);
-    res.status(200).json(postEmployer);
+      req.session.loggedIn = true;
+      req.session.email = req.body.email;
+      res.status(200).json({
+        user: postEmployer,
+        message: 'Successfully registered',
+        loggedIn: req.session.loggedIn,
+      });
   } catch (err) {
     console.error(err);
   }
